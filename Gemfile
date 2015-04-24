@@ -1,6 +1,7 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
+gem "thin"
 gem "bootstrap-sass"
 gem "compass"
 gem "sinatra"

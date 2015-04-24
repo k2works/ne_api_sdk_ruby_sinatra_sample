@@ -1,0 +1,9 @@
+{
+  "_comment" : "FOR DETAILED FORMAT LOOK AT https://docs.docker.com/reference/api/docker_remote_api_v1.16/#create-a-container",
+  "Cmd": [
+    "rackup","-o","0.0.0.0"
+  ],
+  "HostConfig": {
+    "PortBindings":{ "9292/tcp": [{ "HostIp": "0.0.0.0", "HostPort": "9292" }] }
+  }
+}

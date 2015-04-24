@@ -19,7 +19,7 @@ module DemoSite
     configure do
       # Set your Google Analytics ID here if you have one:
       # set :google_analytics_id, 'UA-12345678-1'
- 
+
       set :layouts_dir, 'views/_layouts'
       set :partials_dir, 'views/_partials'
     end

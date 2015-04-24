@@ -1,0 +1,7 @@
+web:
+  build: .
+  command: rackup -o 0.0.0.0
+  volumes:
+    - .:/myapp
+  ports:
+    - "9292:9292"
