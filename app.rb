@@ -66,10 +66,18 @@ module DemoSite
           :layout_options => {:views => settings.layouts_dir}
     end
 
-	    get '/login/' do
+	get '/login/' do
       @page_name = 'login'
       @page_title = 'A login page'
       erb :login,
+        :layout_options => {:views => settings.layouts_dir}
+    end
+
+	get '/form/' do
+      @page_name = 'fome'
+      @page_title = 'Form page'
+      erb :form,
+        :layout => :full_width,
         :layout_options => {:views => settings.layouts_dir}
     end
 
