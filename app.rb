@@ -81,6 +81,14 @@ module DemoSite
         :layout_options => {:views => settings.layouts_dir}
     end
 
+	get '/table/' do
+      @page_name = 'table'
+      @page_title = 'Table page'
+      erb :table,
+        :layout => :full_width,
+        :layout_options => {:views => settings.layouts_dir}
+    end	
+
 
     # Catch-all for /something/else/etc/ pages which just display templates.
     get %r{/([\w\/-]+)/$} do |path|
