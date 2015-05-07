@@ -10,7 +10,8 @@ gem "ne_api_sdk_ruby", github: "k2works/ne_api_sdk_ruby"
 group :development do
    gem 'thin'
    gem 'guard'
-   gem 'guard-livereload'
+   gem 'guard-compass'
+   gem 'guard-livereload'   
    gem 'rack-livereload'
 end
       
