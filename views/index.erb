@@ -1,5 +1,42 @@
 
-<p>Hello world!</p>
+<h2>グリッドレイアウトでレイアウトする</h2>
 
-<p><a href="<%= url('/special/') %>">A special page.</a></p>
-
+<div class="row">
+    <div class="col-xs-6" style="border:solid 1px #000;">段落A</div>
+    <div class="col-xs-6" style="border:solid 1px #000;">段落B</div>
+</div>
+<div class="row">
+    <div class="col-xs-4" style="border:solid 1px #000;">段落C</div>
+    <div class="col-xs-4" style="border:solid 1px #000;">段落D</div>
+    <div class="col-xs-4" style="border:solid 1px #000;">段落E</div>    
+</div>
+<div class="row">
+    <div class="col-xs-3" style="border:solid 1px #000;">段落F</div>
+    <div class="col-xs-3" style="border:solid 1px #000;">段落G</div>
+    <div class="col-xs-3" style="border:solid 1px #000;">段落H</div>
+    <div class="col-xs-3" style="border:solid 1px #000;">段落I</div>
+</div>
+<div class="row">
+    <div class="col-xs-6" style="border:solid 1px #000;">段落A</div>
+    <div class="col-xs-6" style="border:solid 1px #000;">
+        <!-- 入れ子 -->
+        <div class="row">
+            <div class="col-xs-4" style="border:dotted 1px #000;">段落x</div>
+            <div class="col-xs-4" style="border:dotted 1px #000;">段落y</div>
+            <div class="col-xs-4" style="border:dotted 1px #000;">段落z</div>
+        </div>
+    </div>        
+</div>
+<div class="row">
+    <!-- 12分の3の幅 -->
+    <div class="col-xs-3" style="border:solid 1px #000;">段落A</div>
+    <!-- 12分の1だけ空けたあと、12分の4の幅 -->
+    <div class="col-xs-offset-1 col-xs-4" style="border:solid 1px #000;">段落B</div>
+    <!-- 12分の2だけ空けたあと、12分の2の幅 -->
+    <div class="col-xs-2 col-xs-offset-2" style="border:solid 1px #000;">段落C</div>
+</div>
+<div class="row">
+    <div class="col-xs-6 col-xs-push-6" style="border:solid 1px #000;">段落A</div>
+    <div class="col-xs-6 col-xs-pull-6" style="border:solid 1px #000;">段落B</div>
+</div>
+</div>
