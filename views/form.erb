@@ -92,5 +92,85 @@
     <a href="hogehoge.html" class="btn btn-default">リンクだがボタン</a><br>
     <button class="btn-link">ボタンだがリンク</button>
 </form>
-    
+
+<h1>ボタングループの例</h1>
+<h2>ボタンをグループ化しない場合</h2>
+<div>
+    <button class="btn btn-default">新規</button>
+    <button class="btn btn-default">前へ</button>
+    <button class="btn btn-default">編集</button>
+    <button class="btn btn-default">次へ</button>
+</div>
+<h2>グループ化する場合</h2>
+<div class="btn-group btn-group-xs">
+    <button class="btn btn-default">新規</button>
+    <button class="btn btn-default">前へ</button>
+    <button class="btn btn-default">編集</button>
+    <button class="btn btn-default">次へ</button>
+</div>
+<h1>等幅に設定する例</h1>
+<div class="btn-group-justified">
+    <a href="#" class="btn btn-default">新規</a>
+    <a href="#" class="btn btn-default">前へ</a>
+    <a href="#" class="btn btn-default">編集</a>
+    <a herf="#" class="btn btn-default">次へ</a>
+</div>
+
+<h1>ボタンツールバーの例</h1>
+<div class="btn-toolbar">
+    <div class="btn-group">
+        <button class="btn btn-info">ホームに戻る</button>
+        <button class="btn btn-info">ひとつ上へ</button>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-default">新規</button>
+        <button class="btn btn-default">前へ</button>
+        <button class="btn btn-default">編集</button>
+        <button class="btn btn-default">次へ</button>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-danger">削除</button>
+    </div>
+</div>
+<h1>垂直のボタングループ</h1>
+<div class="btn-group-vertical">
+    <button class="btn btn-default">新規</button>
+    <button class="btn btn-default">前へ</button>
+    <button class="btn btn-default">編集</button>
+    <button class="btn btn-default">次へ</button>
+</div>
+
+<h1>入力グループの例</h1>
+<div class="input-group">
+    <input type="text" name="searchtext" class="form-control">
+    <span class="input-group-btn">
+        <input type="submit" value="検索" class="btn btn-primary"></span>
+</div>
+<div class="input-group">
+    <span class="input-group-btn"><input type="submit" value="検索" class="btn btn-primary"></span>    
+    <input type="text" name="searchtext" class="form-control">
+</div>
+<div class="input-group">
+    <input type="text" name="searchtext" class="form-control">
+    <span class="input-group-btn">
+        <input type="submit" value="検索" class="btn btn-primary"></span>
+        <span class="input-group-btn">
+            <input type="submit" value="オプション" class="btn btn-default"></span>
+</div>            
+<h1>入力グループの例（テキストとの連結）</h1>
+<div class="input-group">
+    <input type="text" name="username" class="form-control" size="8">
+    <span class="input-group-addon">@</span>
+    <input type="text" name="domain" class="form-control">
+    <span class="input-group-btn">
+        <input type="submit" value="登録" class="btn btn-primary"></span>
+</div>
+<div class="input-group">
+    <span class="input-group-addon"><input type="checkbox" name="regist"></span>
+    <input type="text" name="username" class="form-control" size="8">
+    <span class="input-group-addon">@</span>
+    <input type="text" name="domain" class="form-control">
+    <span class="input-group-btn">
+        <input type="submit" value="登録" class="btn btn-primary"></span>
+</div>
 </div>
