@@ -1,16 +1,23 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-gem "thin"
 gem "bootstrap-sass"
 gem "compass"
 gem "sinatra"
 gem "sinatra-contrib"
 gem "ne_api_sdk_ruby", github: "k2works/ne_api_sdk_ruby"
 
+group :development do
+   gem 'thin'
+   gem 'guard'
+   gem 'guard-compass'
+   gem 'guard-livereload'   
+   gem 'rack-livereload'
+end
+      
 group :development, :test do
   gem 'pry'
-  gem 'rspec'
+  gem 'rspec'  
 end
 
 group :test do

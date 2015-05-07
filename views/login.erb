@@ -1,0 +1,24 @@
+<%= erb :header, :views => settings.partials_dir %>
+
+<div class="container">
+    <div class="panel panel-primary verticalcenter">
+        <div class="panel-heading">
+            <h1 class="panel-title">ログイン</h1>
+        </div>
+        <div class="panel-body">
+            <form>
+                <div class="form-group">
+                    <label for="username">ログイン名</label>
+                    <input type="text" class="form-control" id="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">パスワード</label>
+                    <input type="password" class="form-control" id="password">
+                </div>
+                <button type="submit" class="btn btn-default">ログイン</button>
+            </form>
+        </div>
+    </div>        
+</div>
+
+<%= erb :footer, :views => settings.partials_dir %>

@@ -62,7 +62,14 @@ module DemoSite
       @page_title = 'A special page'
       @time = Time.now
       erb :special,
-        :layout => :with_sidebar,
+		  :layout => :with_sidebar,
+          :layout_options => {:views => settings.layouts_dir}
+    end
+
+	    get '/login/' do
+      @page_name = 'login'
+      @page_title = 'A login page'
+      erb :login,
         :layout_options => {:views => settings.layouts_dir}
     end
 
