@@ -1,10 +1,18 @@
 <h1>お問い合わせ</h1>
 <p>下記の項目を入力してください</p>
 
+<div class="alert alert-danger alert-dismissable">
+    エラー:<a href="#titleline" class="alert-link">件名</a>が入力されていません。
+    <button class="close" data-dismiss="alert" aria-hidden="true">&times;</button>    
+</div>
+<div class="alert alert-warning">警告:性別が指定されていません。</div>
+
 <form method="post" action="hogehoge.cgi" class="form-horizontal">
-    <div class="form-group">
-        <label for="title" class="control-label col-sm-4">件名</label>
-        <div class="col-sm-8"><input type="text" name="title" id="title" placeholder="件名を入力" class="form-control"></div>
+    <div class="form-group has-error">
+        <a name="titleline"><label for="title" class="control-label col-sm-4">件名</label>
+            <div class="col-sm-8"><input type="text" name="title" id="title" placeholder="件名を入力" class="form-control">
+                <span class="label label-danger">件名は必須です</span>
+            </div>
     </div>
     <div class="form-group">
         <label for="name" class="control-label col-sm-4">お名前</label>
