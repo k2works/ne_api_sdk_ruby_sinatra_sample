@@ -1,0 +1,18 @@
+<h1>「コードからの呼び出し」と「コードレスな動作」</h1>
+
+<div class="modal" id="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">モーダルダイアログの例</div>
+        </div>
+    </div>
+</div>
+
+<button class="btn btn-primary" onclick="$('#modal').modal('show');">表示</button>
+<button class="btn btn-primary" data-toggle="modal" data-target="#modal">表示(コードレス)</button>
+
+<h1>イベントの抑制</h1>
+<input type="checkbox" value="1" id="chkbtn"><label for="chkbtn">チェック</label>
+<button class="btn btn-primary" data-toggle="modal" data-target="#modal">表示</button>
+
+</div>

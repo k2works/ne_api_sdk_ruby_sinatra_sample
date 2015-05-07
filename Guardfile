@@ -26,6 +26,10 @@
 guard 'livereload' do
    watch(%r{views/.+\.(erb|haml|slim|s[ac]ss|coffee)$})
 end
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fa6836e... Sass自動コンパイル対応
 
 # Guard::Compass
 #
@@ -42,3 +46,27 @@ end
 
 # guard 'compass', project_path: 'not_current_dir', configuration_file: 'path/to/my/compass_config.rb'
 guard :compass
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> abc1ecc... LiveReload対応
+=======
+>>>>>>> fa6836e... Sass自動コンパイル対応
+=======
+=======
+>>>>>>> 280446a... Bootstrap3におけるJavaScriptのプログラミングモデル
+
+coffeescript_options = {
+  input: 'views/coffeescripts',
+  output: 'public/js',
+  patterns: [%r{^views/coffeescripts/(.+\.(?:coffee|coffee\.md|litcoffee))$}]
+}
+
+guard 'coffeescript', coffeescript_options do
+  coffeescript_options[:patterns].each { |pattern| watch(pattern) }
+end
+<<<<<<< HEAD
+>>>>>>> caabc40... CoffeeScript対応
+=======
+>>>>>>> 280446a... Bootstrap3におけるJavaScriptのプログラミングモデル

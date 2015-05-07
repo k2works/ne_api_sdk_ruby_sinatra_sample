@@ -29,6 +29,10 @@ GEM
       ffi (~> 1.0, >= 1.0.11)
     chunky_png (1.3.4)
     coderay (1.1.0)
+    coffee-script (2.4.1)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.9.1.1)
     compass (1.0.3)
       chunky_png (~> 1.2)
       compass-core (~> 1.0.2)
@@ -63,9 +67,29 @@ GEM
       pry (>= 0.9.12)
       shellany (~> 0.0)
       thor (>= 0.18.1)
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     guard-compass (1.1.0)
       compass (>= 0.10.5)
       guard (~> 2.0)
+=======
+>>>>>>> abc1ecc... LiveReload対応
+=======
+    guard-compass (1.1.0)
+      compass (>= 0.10.5)
+      guard (~> 2.0)
+>>>>>>> fa6836e... Sass自動コンパイル対応
+=======
+    guard-coffeescript (2.0.1)
+      coffee-script (>= 2.2.0)
+      guard (>= 2.1.0)
+      guard-compat (~> 1.1)
+    guard-compass (1.1.0)
+      compass (>= 0.10.5)
+      guard (~> 2.0)
+    guard-compat (1.2.1)
+>>>>>>> caabc40... CoffeeScript対応
     guard-livereload (2.4.0)
       em-websocket (~> 0.5)
       guard (~> 2.8)
@@ -155,9 +179,21 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass
   capybara
+  coffee-script
   compass
   guard
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
   guard-compass
+=======
+>>>>>>> abc1ecc... LiveReload対応
+=======
+=======
+  guard-coffeescript
+>>>>>>> caabc40... CoffeeScript対応
+  guard-compass
+>>>>>>> fa6836e... Sass自動コンパイル対応
   guard-livereload
   launchy
   ne_api_sdk_ruby!

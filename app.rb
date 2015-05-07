@@ -87,6 +87,14 @@ module DemoSite
       erb :table,
         :layout => :full_width,
         :layout_options => {:views => settings.layouts_dir}
+    end
+
+	get '/javascript/' do
+      @page_name = 'JavaScript'
+      @page_title = 'JavaScript page'
+      erb :javascript,
+        :layout => :full_width,
+        :layout_options => {:views => settings.layouts_dir}
     end	
 
 
