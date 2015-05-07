@@ -1,5 +1,19 @@
 <%= erb :header, :views => settings.partials_dir %>
 
+<div class="panel panel-default">
+    <form action="login" class="form-inline text-right">
+        <div class="form-group">
+            <label class="control-label sr-only">ユーザー名</label>
+            <input type="text" name="username" placeholder="ユーザー名" class="form-control input-sm">
+        </div>
+        <div class="form-group">
+            <label class="control-label sr-only">パスワード</label>
+            <input type="password" name="password" placeholder="パスワード" class="form-control input-sm">
+        </div>
+        <input type="submit" class="btn btn-default" value="ログイン">
+    </form>
+</div>
+
 <div class="container">
   <div class="row">
 

@@ -1,66 +1,76 @@
 <h1>お問い合わせ</h1>
 <p>下記の項目を入力してください</p>
 
-<form method="post" action="hogehoge.cgi">
+<form method="post" action="hogehoge.cgi" class="form-horizontal">
     <div class="form-group">
-        <label for="title" class="control-label">件名</label>
-        <input type="text" name="title" id="title" placeholder="件名を入力" class="form-control input-lg">
+        <label for="title" class="control-label col-sm-4">件名</label>
+        <div class="col-sm-8"><input type="text" name="title" id="title" placeholder="件名を入力" class="form-control"></div>
     </div>
     <div class="form-group">
-        <label for="name" class="control-label">お名前</label>
-        <input type="text" name="name" id="name" placeholder="お名前を入力" class="form-control">
+        <label for="name" class="control-label col-sm-4">お名前</label>
+        <div class="col-sm-8"><input type="text" name="name" id="name" placeholder="お名前を入力" class="form-control"></div>
     </div>
     <div class="form-group">    
-        <label for="date" class="control-label>"問い合わせ日</label>
-        <p class="form-control-static">2014年1月10日</p>
+        <label for="date" class="control-label col-sm-4">問い合わせ日</label>
+        <div class="col-sm-8"><p class="form-control-static">2014年1月10日</p></div>
         <input type="hidden" name="date" value="2014-01-10">
     </div>
     <div class="form-group">    
-        <label for="email" class="control-label">メールアドレス</label>
-        <input type="text" name="email" id="email" placeholder="メールアドレスを入力" class="form-control">
+        <label for="email" class="control-label col-sm-4">メールアドレス</label>
+        <div class="col-sm-8"><input type="text" name="email" id="email" placeholder="メールアドレスを入力" class="form-control"></div>
     </div>
     <div class="form-group">    
-        <p class="control-label"><strong>性別</strong><p>
-            <label class="radio-inline">
-                <input type="radio" value="1" name="gender" id="man">男性
+        <p class="control-label col-sm-4"><strong>性別</strong><p>
+            <div class="col-sm-8">
+                <label class="radio-inline">
+                    <input type="radio" value="1" name="gender" id="man">男性
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" value="2" name="gender" id="woman">女性
+                </label>
+            </div>
+    </div>    
+    <div class="form-group">    
+        <p class="control-label col-sm-4"><strong>ご利用のOS</strong></p>
+        <div class="col-sm-8">
+            <label class="checkbox-inline">
+                <input type="checkbox" value="windows" name="os" id="os_windows">Windows
             </label>
-            <label class="radio-inline">
-                <input type="radio" value="2" name="gender" id="woman">女性
+            <label class="checkbox-inline">
+                <input type="checkbox" value="macos" name="os" id="os_macs">Mac
             </label>
+            <label class="checkbox-inline">            
+                <input type="checkbox" value="android" name="os" id="os_android">Android
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" value="ios" name="os" id="os_ios">iOS
+            </label>
+        </div>
     </div>
     <div class="form-group">    
-        <p class="control-label"><strong>ご利用のOS</strong></p>
-        <label class="checkbox-inline">
-            <input type="checkbox" value="windows" name="os" id="os_windows">Windows
-        </label>
-        <label class="checkbox-inline">
-            <input type="checkbox" value="macos" name="os" id="os_macs">Mac
-        </label>
-        <label class="checkbox-inline">            
-            <input type="checkbox" value="android" name="os" id="os_android">Android
-        </label>
-        <label class="checkbox-inline">
-            <input type="checkbox" value="ios" name="os" id="os_ios">iOS
-        </label>
+        <p class="control-label col-sm-4"><strong>年齢</strong></p>
+        <div class="col-sm-8">
+            <select name="age" id="age" class="form-control">
+                <option value="10">10代</option>
+                <option value="20">20代</option>
+                <option value="30">30代</option>
+                <option value="40">40代</option>
+                <option value="50">50代</option>
+                <option value="60">60歳以上</option>
+            </select>
+        </div>
     </div>
     <div class="form-group">    
-        <p class="control-label"><strong>年齢</strong></p>
-        <select name="age" id="age" class="form-control input-sm">
-            <option value="10">10代</option>
-            <option value="20">20代</option>
-            <option value="30">30代</option>
-            <option value="40">40代</option>
-            <option value="50">50代</option>
-            <option value="60">60歳以上</option>
-        </select>
+        <label for="body" class="control-label col-sm-4">お問い合わせ内容</label>
+        <div class="col-sm-8">
+            <textarea name="body" id="body" cols="40" rows="5" placeholder="お問い合わせ内容を記述してください" class="form-control"></textarea>
+            <p class="help-block">※1000文字まで入力できます。</p>
+        </div>
     </div>
-    <div class="form-group">    
-        <label for="body" class="control-label">お問い合わせ内容</label>        
-        <textarea name="body" id="body" cols="40" rows="5" placeholder="お問い合わせ内容を記述してください" class="form-control"></textarea>
-        <p class="help-block">※1000文字まで入力できます。</p>
-    </div>
+    <div class="col-sm-offset-4 text-center">
     <input type="submit" value="送信" class="btn btn-primary">&nbsp;
     <input type="reset" value="キャンセル" class="btn btn-default">
+    </div>
 </form>
 </div>
                 
