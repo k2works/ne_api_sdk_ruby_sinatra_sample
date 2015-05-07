@@ -22,60 +22,158 @@
             <td class="text-right">¥30,000</td><td>発送完了</td><td><a href="#">詳細</a></td>
         </tr>
     </table>
-
-    <ul class="pagination">
-        <li><a href="#">&laquo;</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">&raquo;</a></li>
-    </ul>
-
-    <ul class="pagination">
-        <li><a href="#">&laquo;</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li class="active"><a href="#">3</a></li>
-        <li class="disabled"><a href="#">&raquo;</a></li>
-    </ul>
-
-    <h1>大きい(pagination-lg)</h1>
-    <ul class="pagination pagination-lg">
-        <li><a href="#">&laquo;</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li class="active"><a href="#">3</a></li>
-        <li class="disabled"><a href="#">&raquo;</a></li>
-    </ul>
-
-    <h1>通常</h1>
-    <ul class="pagination">
-        <li><a href="#">&laquo;</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li class="active"><a href="#">3</a></li>
-        <li class="disabled"><a href="#">&raquo;</a></li>
-    </ul>
-
-    <h1>小さい(pagination-sm)</h1>
-    <ul class="pagination pagination-sm">
-        <li><a href="#">&laquo;</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li class="active"><a href="#">3</a></li>
-        <li class="disabled"><a href="#">&raquo;</a></li>
-    </ul>
-
-    <h1>ページャ</h1>
-    <ul class="pager">
-        <li><a href="#">前へ</a></li>
-        <li><a href="#">次へ</a></li>
-    </ul>
-
-    <ul class="pager">
-        <li class="previous"><a href="#">前へ</a></li>
-        <li class="next disabled"><a href="#">次へ</a></li>
-    </ul>
-    
 </div>
+
+<ul class="pagination">
+    <li><a href="#">&laquo;</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">&raquo;</a></li>
+</ul>
+
+<ul class="pagination">
+    <li><a href="#">&laquo;</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li class="active"><a href="#">3</a></li>
+    <li class="disabled"><a href="#">&raquo;</a></li>
+</ul>
+
+<h1>大きい(pagination-lg)</h1>
+<ul class="pagination pagination-lg">
+    <li><a href="#">&laquo;</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li class="active"><a href="#">3</a></li>
+    <li class="disabled"><a href="#">&raquo;</a></li>
+</ul>
+
+<h1>通常</h1>
+<ul class="pagination">
+    <li><a href="#">&laquo;</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li class="active"><a href="#">3</a></li>
+    <li class="disabled"><a href="#">&raquo;</a></li>
+</ul>
+
+<h1>小さい(pagination-sm)</h1>
+<ul class="pagination pagination-sm">
+    <li><a href="#">&laquo;</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li class="active"><a href="#">3</a></li>
+    <li class="disabled"><a href="#">&raquo;</a></li>
+</ul>
+
+<h1>ページャ</h1>
+<ul class="pager">
+    <li><a href="#">前へ</a></li>
+    <li><a href="#">次へ</a></li>
+</ul>
+
+<ul class="pager">
+    <li class="previous"><a href="#">前へ</a></li>
+    <li class="next disabled"><a href="#">次へ</a></li>
+</ul>
+
+<h1>リスト</h1>
+<ul class="list-unstyled">
+    <li>項目１</li>
+    <li>項目２</li>
+</ul>
+
+<ul class="list-inline">
+    <li>項目１</li>
+    <li>項目２</li>
+</ul>
+
+<dl class="dl-horizontal">
+    <dt>新規登録</dt>
+    <dd>ユーザーを新規に登録します。</dd>
+</dl>
+<dl class="dl-horizontal">
+    <dt>編集</dt>
+    <dd>ユーザーを編集します。</dd>
+</dl>
+<dl class="dl-horizontal">
+    <dt>削除</dt>
+    <dd>ユーザーを削除します。未発送の商品があるユーザーは削除できません。</dd>
+</dl>
+
+<ul class="listgroup">
+    <li class="list-group-item"><span class="badge">10</span>未入金</li>
+    <li class="list-group-item"><span class="badge">5</span>入金済み</li>
+    <li class="list-group-item">発送手配中</li>
+    <li class="list-group-item">発送中</li>
+    <li class="list-group-item">発送完了</li>        
+</ul>
+
+<div class="listgroup">
+    <a href="#" class="list-group-item"><span class="badge">10</span>未入金</a>
+    <a href="#" class="list-group-item active"><span class="badge">5</span>入金済み</a>
+    <a href="#" class="list-group-item">発送手配中</a>
+    <a href="#" class="list-group-item">発送中</a>
+    <a href="#" class="list-group-item">発送完了</a>        
+</div>
+
+<div class="list-group">
+    <a href="#" class="list-group-item">
+        <h4 class="list-group-item-heading">新着注文</h4>
+        <p class="list-group-item-text">山田三郎様から注文がありました</p>
+    </a>
+    <a href="#" class="list-group-item">
+        <h4 class="list-group-item-heading">入金完了</h4>
+        <p class="list-group-item-text">鈴木史朗様から入金がありました</p>
+    </a>
+    <a href="#" class="list-group-item">
+        <h4 class="list-group-item-heading">ステータス変更</h4>
+        <p class="list-group-item-text">田中五郎様の注文が発送中になりました</p>
+    </a>
+</div>
+
+<div class="media">
+    <div class="pull-left"> <!-- もしくはpull-right -->
+        <img class="media-object" src="http://placehold.it/150x150" alt="ワニ肉の写真">
+    </div>
+    <div class="media-body">
+        <h4 class="media-heading">ワニ肉</h4>
+        <p>ジューシーなワニ肉。焼き鳥のような味わい。</p>
+        <button class="btn btn-default pull-right">詳細</button>
+    </div>
+</div>
+
+<ul class="media-list">
+    <li class="media">
+        <div class="pull-left">
+            <img class="media-object" src="http://placehold.it/150x150" alt="ワニ肉の写真">
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">ワニ肉</h4>
+            <p>ジューシーなワニ肉。焼き鳥のような味わい。</p>
+            <button class="btn btn-default pull-right">詳細</button>
+        </div>
+    </li>        
+    <li class="media">
+        <div class="pull-left">
+            <img class="media-object" src="http://placehold.it/150x150" alt="バナナの写真">
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">バナナ</h4>
+            <p>温室になっているバナナ。青いうちに収穫する。</p>
+            <button class="btn btn-default pull-right">詳細</button>
+        </div>
+    </li>
+    <li class="media">
+        <div class="pull-left">
+            <img class="media-object" src="http://placehold.it/150x150" alt="タケノコ">
+        </div>
+        <div class="media-body">            
+            <h4 class="media-heading">タケノコ</h4>
+            <p>皮のまま七輪で焼く。ほっくり焼けたところを見計らって食べる。</p>
+            <button class="btn btn-default pull-right">詳細</button>
+        </div>
+    </li>
+</ul>
        
