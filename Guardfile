@@ -42,3 +42,13 @@ end
 
 # guard 'compass', project_path: 'not_current_dir', configuration_file: 'path/to/my/compass_config.rb'
 guard :compass
+
+coffeescript_options = {
+  input: 'views/coffeescripts',
+  output: 'public/js',
+  patterns: [%r{^views/coffeescripts/(.+\.(?:coffee|coffee\.md|litcoffee))$}]
+}
+
+guard 'coffeescript', coffeescript_options do
+  coffeescript_options[:patterns].each { |pattern| watch(pattern) }
+end
