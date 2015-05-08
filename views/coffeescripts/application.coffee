@@ -64,3 +64,17 @@ $ ->
         setTimeout(->
             btn.button 'reset'            
         , 2000)
+
+# ナビゲーションバーイベントを処理する
+$('#mytab').on 'show.bs.tab', (e) ->
+    fromTab = e.relatedTarget
+    toTab = e.target
+
+    if !confirm(fromTab.innerHtml + 'から' + toTab.innerHTML + 'に切り替えます。よろしいですか？')
+        e.preventDefault()
+
+# Collapseイベントを処理する
+$ ->
+    $('#closepanel').on 'hide.bs.collapse', (e) ->
+        if !confirm('閉じてよろしいですか？')
+            e.preventDefault()

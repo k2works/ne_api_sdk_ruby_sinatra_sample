@@ -72,4 +72,21 @@
     });
   });
 
+  $('#mytab').on('show.bs.tab', function(e) {
+    var fromTab, toTab;
+    fromTab = e.relatedTarget;
+    toTab = e.target;
+    if (!confirm(fromTab.innerHtml + 'から' + toTab.innerHTML + 'に切り替えます。よろしいですか？')) {
+      return e.preventDefault();
+    }
+  });
+
+  $(function() {
+    return $('#closepanel').on('hide.bs.collapse', function(e) {
+      if (!confirm('閉じてよろしいですか？')) {
+        return e.preventDefault();
+      }
+    });
+  });
+
 }).call(this);
