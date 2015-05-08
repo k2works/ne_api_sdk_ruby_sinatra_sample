@@ -89,4 +89,8 @@
     });
   });
 
+  $(document).on('activate.bs.scrollspy', function(e) {
+    return alert(e.target.nodeName);
+  });
+
 }).call(this);

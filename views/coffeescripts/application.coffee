@@ -78,3 +78,7 @@ $ ->
     $('#closepanel').on 'hide.bs.collapse', (e) ->
         if !confirm('閉じてよろしいですか？')
             e.preventDefault()
+
+# アクティブなメニュー項目に変わったことを把握する
+$(document).on 'activate.bs.scrollspy', (e) ->
+    alert e.target.nodeName
