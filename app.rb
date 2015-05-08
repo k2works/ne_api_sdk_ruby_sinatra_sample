@@ -95,8 +95,7 @@ module DemoSite
       erb :javascript,
         :layout => :full_width,
         :layout_options => {:views => settings.layouts_dir}
-    end	
-
+    end
 
     # Catch-all for /something/else/etc/ pages which just display templates.
     get %r{/([\w\/-]+)/$} do |path|

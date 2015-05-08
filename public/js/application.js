@@ -14,4 +14,14 @@
     }
   });
 
+  $('#mymodal').modal('show');
+
+  $('#mymodal').modal('hide');
+
+  $('#mymodal').on('hide.bs.modal', function(e) {
+    if (!confirm('閉じてよろしいですか？')) {
+      return e.preventDefault();
+    }
+  });
+
 }).call(this);
