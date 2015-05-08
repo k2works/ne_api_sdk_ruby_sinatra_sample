@@ -18,3 +18,13 @@ $('#mymodal').modal('hide')
 $('#mymodal').on 'hide.bs.modal', (e) ->
     if (!confirm('閉じてよろしいですか？'))
         e.preventDefault()
+
+# ツールチップの基本
+$('#mybutton').tooltip()
+
+# 表示非表示にする
+$('#mybutton').tooltip('show')
+$('#mybutton').tooltip('hide')
+
+# ポップオーバー
+$('[data-toggle=popover]').popover()

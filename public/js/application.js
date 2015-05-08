@@ -24,4 +24,12 @@
     }
   });
 
+  $('#mybutton').tooltip();
+
+  $('#mybutton').tooltip('show');
+
+  $('#mybutton').tooltip('hide');
+
+  $('[data-toggle=popover]').popover();
+
 }).call(this);
