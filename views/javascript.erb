@@ -162,6 +162,49 @@
     </div>
 </div>
 
+<h1>カルーセルの基本</h1>
+<div id="mycarousel" class="carousel slide" data-ride="carousel">
+    <!-- インジケーター -->
+    <ol class="carousel-indicators">
+        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#mycarousel" data-slide-to="1"></li>
+        <li data-target="#mycarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- 画像表示域 -->
+    <div class="carousel-inner">
+        <!-- 1枚目 -->
+        <div class="item active">
+            <img src="http://placehold.it/600x600" alt="ひまわり" class="center-block">
+            <div class="carousel-caption">
+                <h3>ひまわり</h3><p>ひまわりの写真</p>
+            </div>
+        </div>
+        <!-- 2枚目以降 -->
+        <div class="item">
+            <img src="http://placehold.it/600x600" alt="ひまわり" class="center-block">
+            <div class="carousel-caption">
+                <h3>ひまわり</h3><p>ひまわりの写真</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="http://placehold.it/600x600" alt="ひまわり" class="center-block">
+            <div class="carousel-caption">
+                <h3>ひまわり</h3><p>ひまわりの写真</p>
+            </div>
+        </div>
+    </div>
+    
+    <!--左右のコントロール-->
+    <a class="carousel-control left" href="#mycarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="carousel-control right" href="#mycarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+        
+
 <h1>ScrollSpyコントロールの基本</h1>
 <div id="navbar2">
     <ul class="nav nav-tabs">
@@ -192,3 +235,4 @@
     テキストコンテンツ<br>
     テキストコンテンツ<br>
 </div>
+

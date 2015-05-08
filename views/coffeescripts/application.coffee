@@ -82,3 +82,9 @@ $ ->
 # アクティブなメニュー項目に変わったことを把握する
 $(document).on 'activate.bs.scrollspy', (e) ->
     alert e.target.nodeName
+
+# カルーセルイベントを処理する
+$ ->
+    $('#mycarousel').on 'slide.bs.carousel', (e) ->
+        if !confirm('切り替えても、よろしいですか？')
+            e.preventDefault()

@@ -93,4 +93,12 @@
     return alert(e.target.nodeName);
   });
 
+  $(function() {
+    return $('#mycarousel').on('slide.bs.carousel', function(e) {
+      if (!confirm('切り替えても、よろしいですか？')) {
+        return e.preventDefault();
+      }
+    });
+  });
+
 }).call(this);
