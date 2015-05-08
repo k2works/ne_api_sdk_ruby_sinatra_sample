@@ -8,4 +8,10 @@
     });
   });
 
+  $('#myalert').on('close.bs.alert', function(e) {
+    if (!confirm('閉じてよろしいですか？')) {
+      return e.preventDefault();
+    }
+  });
+
 }).call(this);
