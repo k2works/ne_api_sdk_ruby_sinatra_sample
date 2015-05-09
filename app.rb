@@ -1,5 +1,6 @@
 require "sinatra/base"
 require "sinatra/reloader"
+require "slim"
 
 module DemoSite
   class App < Sinatra::Base
@@ -29,7 +30,7 @@ module DemoSite
         status 404
         @page_name = '404'
         @page_title = '404'
-        erb :'404', :layout => :with_sidebar,
+        slim :'404', :layout => :with_sidebar,
                     :layout_options => {:views => settings.layouts_dir}
       end
     end
@@ -49,7 +50,7 @@ module DemoSite
     get '/' do
       @page_name = 'home'
       @page_title = 'Home page'
-      erb :index,
+      slim :index,
         :layout => :full_width,
         :layout_options => {:views => settings.layouts_dir}
     end
@@ -61,7 +62,7 @@ module DemoSite
       @page_name = 'special'
       @page_title = 'A special page'
       @time = Time.now
-      erb :special,
+      slim :special,
         :layout => :with_sidebar,
         :layout_options => {:views => settings.layouts_dir}
     end
@@ -87,7 +88,7 @@ module DemoSite
         if pages[path].has_key?(:layout)
           layout = pages[path][:layout].to_sym
         end
-        erb @page_name.to_sym,
+        slim @page_name.to_sym,
           :layout => layout,
           :layout_options => {:views => settings.layouts_dir}
       else

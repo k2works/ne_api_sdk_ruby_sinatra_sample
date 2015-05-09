@@ -1,0 +1,8 @@
+== erb :header, :views => settings.partials_dir
+.container
+  .row
+    .col-md-12
+      h1
+        == @page_title
+      == yield
+== erb :footer, :views => settings.partials_dir

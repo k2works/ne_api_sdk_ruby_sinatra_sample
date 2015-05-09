@@ -1,0 +1,29 @@
+== erb :header, :views => settings.partials_dir
+.container
+  .row
+    .col-sm-9
+      h1
+        == @page_title
+      == yield
+    .col-sm-3.sidebar
+      p
+        | Some sidebar content goes here.
+      p
+        | It could vary for some pages depending on
+        code
+          | @page_name
+        | .
+      ul
+        |  <li
+        - if @page_name == 'help'
+          |  class="active"
+        | ><a href="
+        == url('/help/')
+        | ">Introduction
+        |  <li
+        - if @page_name == 'help_accounts'
+          |  class="active"
+        | ><a href="
+        == url('/help/accounts/')
+        | ">Accounts help
+== erb :footer, :views => settings.partials_dir
