@@ -3,3 +3,23 @@
 // Set styles only used on this site, or in this section, if you want different
 // CSS files for each section.
 
+#main {
+  section {
+    margin-bottom: 50px;
+    h1 {
+      font-size: 140%;      
+    }      
+    p, ul {
+      margin-bottom: 1.5em;
+    }
+    p.notes {
+      color: red;
+    }
+  }
+  float: left;
+  width: 640px;
+  @media screen and (max-width: 640px) {
+    float: none;
+    width: auto;
+    }
+}
