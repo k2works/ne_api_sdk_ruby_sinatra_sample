@@ -1,6 +1,8 @@
 require "sinatra/base"
 require "sinatra/reloader"
 require "slim"
+require 'dotenv'
+require 'redis'
 
 module DemoSite
   class App < Sinatra::Base
@@ -23,6 +25,13 @@ module DemoSite
 
       set :layouts_dir, 'views/_layouts'
       set :partials_dir, 'views/_partials'
+
+      Dotenv.load
+
+      REDIS = Redis.new(
+          host: ENV["REDIS_HOST"],
+          port: ENV["REDIS_PORT"]
+      )
     end
 
     helpers do
@@ -48,6 +57,7 @@ module DemoSite
 
 
     get '/' do
+      @hello_redis = "Hello World! I have been seen #{REDIS.incr('/')} times."
       @page_name = 'home'
       @page_title = 'Home page'
       slim :index,

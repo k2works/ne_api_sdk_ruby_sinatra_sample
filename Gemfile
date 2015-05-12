@@ -8,6 +8,8 @@ gem 'sinatra-contrib'
 gem 'coffee-script'
 gem 'slim'
 gem 'ne_api_sdk_ruby', github: 'k2works/ne_api_sdk_ruby'
+gem 'redis'
+gem 'dotenv'
 
 group :development do
    gem 'thin'

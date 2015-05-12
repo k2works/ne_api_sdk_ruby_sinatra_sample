@@ -1,0 +1,17 @@
+# Created by .ignore support plugin (hsz.mobi)
+## environment normalization
+.env
+.bundle
+.versions.conf
+
+## git
+.git
+.gitignore
+
+## log
+log
+tmp
+dump.rdb
+
+## docker
+.dockerignore
