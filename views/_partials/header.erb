@@ -12,26 +12,6 @@
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
-</head>
-<body>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title><% if @page_title %><%= @page_title %> (YOUR SITE NAME)<% else %>YOUR SITE NAME<% end %></title>
-
-  <link href="<%= url('/css/styles.css') %>" rel="stylesheet">
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
@@ -45,338 +25,215 @@
   <div class="navbar-inner">
     <div class="container-fluid">
       <ul id="ne_topmenu" class="nav">
-
-
-
-        <li><a href="/Usertop"  style="padding:5px 0px;"><span class="nav-collapse"><img src="ux/img/logos/NE_mainlogo_white.png" class="mainlogo" onmouseover="this.src='ux/img/logos/NE_mainlogo_grey.png'" onmouseout="this.src='ux/img/logos/NE_mainlogo_white.png'" alt="ネクストエンジン"></span><span class="navmenu"><img src="ux/img/logos/NE_mainlogo_white.png" class="mainlogo" onmouseover="this.src='ux/img/logos/NE_mainlogo_grey.png'" onmouseout="this.src='ux/img/logos/NE_mainlogo_white.png'" alt="ネクストエンジン"></span></a></li>
-
-
+        <li>
+          <a href="/">
+            <i class="fa fa-home fa-lg"></i>
+          </a>
+        </li>
         <li class="divider-vertical nav-collapse"></li>
-
-
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">受注</span><i class="icon-list-alt"></i><b class="caret"></b></a>
-
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">受注</span><i class="fa fa-envelope-o"></i><b class="caret"></b></a>
           <ul class="dropdown-menu">
-
-            <li><a href="/Userjyuchu">受注伝票管理</a></li>
-            <li><a href="/Usercsv">受注一括登録</a></li>
-            <li><a href="/Userjyuchujyotai">受注伝票有効化</a></li>
-            <li><a href="/Userbikoukakunin">備考欄一括確認</a></li>
-            <li><a href="/Userjyuchuikkatu">受注伝票一括更新</a></li>
-            <li><a href="/Userjyuchumeisai">受注明細一覧</a></li>
-            <li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">メール</a><ul class="dropdown-menu"><li><a href="/Usermailsend/nyukin">入金確認メール送信</a></li><li><a href="/Usermailsend/free">フリーメール送信</a></li><li><a href="/Usermailstat/stat">送信待ち</a></li><li><a href="/Usermailstat/log">送信履歴</a></li></ul></li>
-            <li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">決済</a><ul class="dropdown-menu"><li><a href="/Userurikake/nyukinInsInit">入金登録</a></li><li><a href="/usertools/nyuukin">一括入金処理</a></li><li><a href="/usertools/rakutencard">楽天カード決済確定</a></li><li><a href="/usertools/yahoocard">Yahooカード決済確定</a></li><li><a href="/usertools/ynyuukin">Yahoo入金処理</a></li><li><a href="/Useryahooauction">Yahooかんたん決済入金確認</a></li><li><a href="/usertools/np">NP後払いサポート</a></li><li><a href="/usernpconnect">NPコネクトPROサポート</a></li><li><a href="/useratobarai/ato">後払い.comサポート</a></li><li><a href="/usertools/nissen">ニッセン＠払いサポート</a></li></ul></li>
-            <li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">卸先マスタ</a><ul class="dropdown-menu"><li><a href="/Usersearchorosi">卸先マスタ検索</a></li><li><a href="/Usermstorosi">卸先マスタ登録</a></li><li><a href="/Usercsvup?c=21">卸先マスタ一括登録</a></li></ul></li>
-
+            <li><a href="/Userjyuchu">問い合わせ</a></li>
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">受注取り込み</a>
+              <ul class="dropdown-menu">
+                <li><a href="/Usermailsend/nyukin">受注メール取込設定</a></li>
+                <li><a href="/Usermailsend/free">受注CSVダウンロード</a></li>
+                <li><a href="/Usermailstat/stat">受注一括登録</a></li>
+                <li><a href="/Usermailstat/log">受注API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">受注内容確認</a>
+              <ul class="dropdown-menu">
+                <li><a href="/Usermailsend/nyukin">備考一括確認</a></li>
+                <li><a href="/Usermailsend/free">連絡メール</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">引当</a>
+              <ul class="dropdown-menu">
+                <li><a href="/Usermailsend/nyukin">在庫一括CSVダウンロード</a></li>
+                <li><a href="/Usermailsend/free">商品マスタ一括登録</a></li>
+              </ul>
+            </li>            
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">入金確認</a>
+              <ul class="dropdown-menu">
+                <li><a href="/Usermailsend/nyukin">入金登録</a></li>
+                <li><a href="/Usermailsend/free">一括入金処理</a></li>
+                <li><a href="/Usermailstat/stat">入金確認メール</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">受注確認</a>
+              <ul class="dropdown-menu">
+                <li><a href="/Usermailsend/nyukin">受注確認メール</a></li>
+              </ul>
+            </li>                        
           </ul>
         </li>
 
-
         <li class="divider-vertical nav-collapse"></li>
-
-
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">出荷</span><i class="icon-truck"></i><b class="caret"></b></a>
-
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">出荷</span><i class="fa fa-truck"></i><b class="caret"></b></a>
           <ul class="dropdown-menu">
-
-            <li><a href="/Userdownload/ndl">納品書ダウンロード</a></li>
-            <li><a href="/usertools/pdfndl">納品書PDF複数ダウンロード</a></li>
-            <li><a href="/usertools/kenpin">検品サポート</a></li>
-            <li><a href="/Usersyukakepin/syukaset">出荷確定処理</a></li>
-            <li><a href="/Usersyukakenpin">バーコード検品出荷処理</a></li>
-            <li><a href="/Usersyukakepin/kepinset">欠品処理</a></li>
-            <li><a href="/Usersyukakepin/furyokepinset">不良欠品処理</a></li>
-            <li><a href="/Userdownload/haisoudl">配送情報ダウンロード</a></li>
-            <li class="divider"></li>
-            <li class="nav-header">出荷済み</li>
-            <li><a href="/Userhaisouhanei">配送番号反映</a></li>
-            <li><a href="/Usertools/haisouhanei">配送番号サポート</a></li>
-            <li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">倉庫連携</a><ul class="dropdown-menu"><li><a href="/Userlogi">ロジザードプラス</a></li><li><a href="/Userscroll360">スクロール３６０</a></li><li><a href="/Userlogiyahoo">Yahoo!ロジスティクス</a></li><li><a href="/Userlogine">ロジスティックサポート</a></li><li class="divider"></li><li class="nav-header">楽天スーパーロジ<i class="icon-truck"></i></li><li><a href="/Userrfc/startupPageView">初期登録</a></li><li><a href="/Userrfc/inboundPageView">入荷処理</a></li><li><a href="/Userrfc/shippingPageView">出荷処理</a></li><li><a href="/Userrfc/returnPageView">返品処理</a></li><li><a href="/Userrfc/inventoryPageView">全在庫情報</a></li><li><a href="/Userrfc">処理状況一覧</a></li></ul></li>
-            <li class="divider"></li>
-            <li class="nav-header">在庫連携のみ</li>
-            <li><a href="/usertools2/syukkaindex">出荷通知一括登録</a></li>
-            <li class="divider"></li>
-            <li class="nav-header">楽天市場</li>
-            <li><a href="/usertools3/rakutensyukka">お荷物伝票番号ダウンロード</a></li>
-            <li class="nav-header">Amazon</li>
-            <li><a href="/usertools4/amazonsyukka">出荷通知ダウンロード</a></li>
-            <li class="nav-header">Yahoo!ショッピング</li>
-            <li><a href="/usertools/ysf">出荷実績ダウンロード</a></li>
-            <li><a href="/usertools/ysfpricechkinit">受注金額照合</a></li>
-            <li class="nav-header">MakeShop・ネクストエンジンカート</li>
-            <li><a href="/usertools4/makeshopsyukka">配送ステータス変更ダウンロード</a></li>
-
+            <li class="nav-header">出荷<i class=""></i></li>
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">ピッキングリスト作成</a>
+              <ul class="dropdown-menu">
+                <li><a href="/Usermailsend/nyukin">便種振り分け</a></li>
+                <li><a href="/Usermailsend/free">CSVファイルダウンロード</a></li>
+                <li><a href="/Usermailstat/stat">NextEngine受注伝票アップロード</a></li>
+                <li><a href="/Usermailstat/log">受注残ダウンロード</a></li>
+                <li><a href="/Usermailstat/log">ピッキングリスト印刷</a></li>                
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">納品書作成</a>
+              <ul class="dropdown-menu">
+                <li><a href="/Usermailsend/nyukin">納品書ダウンロード</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">出荷案内</a>
+              <ul class="dropdown-menu">
+                <li><a href="/Usermailsend/nyukin">配送番号反映</a></li>
+                <li><a href="/Usermailsend/free">発送連絡メールの送信</a></li>
+                <li><a href="/Usermailstat/stat">発送済みメールの確認</a></li>
+              </ul>
+            </li>            
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">送り状作成</a>
+              <ul class="dropdown-menu">
+                <li><a href="/Usermailsend/nyukin">CSVファイルダウンロード</a></li>
+                <li><a href="/Usermailsend/free">NextEngine受注伝票アップロード</a></li>
+                <li><a href="/Usermailstat/stat">受注残ダウンロード</a></li>
+                <li><a href="/Usermailstat/log">運送会社振り分け</a></li>
+                <li><a href="/Usermailsend/nyukin">出荷確定処理</a></li>
+                <li><a href="/Usermailsend/free">配送情報ダウンロード</a></li>
+                <li><a href="/Usermailstat/stat">ゆうぱっくプリントR</a></li>
+                <li><a href="/Usermailstat/log">B2</a></li>
+                <li><a href="/Usermailsend/nyukin">e飛伝2</a></li>
+                <li><a href="/Usermailsend/free">配送情報の印刷</a></li>
+              </ul>
+            </li>
+            <li class="divider"></li>                      
+            <li class="nav-header">売上<i class=""></i></li>
+            <li><a href="/Usermailsend/nyukin">売上確定</a></li>            
+            </li>
+            <li class="divider"></li>            
           </ul>
         </li>
 
-
         <li class="divider-vertical nav-collapse"></li>
-
-
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">商品</span><i class="icon-gift"></i><b class="caret"></b></a>
-
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">商品</span><i class="fa fa-gift"></i><b class="caret"></b></a>
           <ul class="dropdown-menu">
-
             <li class="nav-header">商品<i class=""></i></li>
-            <li><a href="/Usersearchsyohin">商品マスタ管理</a></li>
-            <li><a href="/Usercsvupque">商品マスタ一括登録</a></li>
-            <li><a href="/Usersetsyohin">セット商品マスタ管理</a></li>
-            <li><a href="/Usercsvup?c=108">セット商品マスタ一括登録</a></li>
-            <li><a href="/Usertools/syohindata">商品マスタ全件ダウンロード</a></li>
-            <li><a href="/usertools/malltomasternotice">商品情報一括登録</a></li>
+            <li><a href="/Usersearchsyohin">商品登録</a></li>
+            <li><a href="/Usercsvupque">商品情報更新</a></li>
             <li class="divider"></li>
-            <li class="nav-header">在庫連携<i class=""></i></li>
-            <li><a href="/Usertorikomi">モール商品一括登録</a></li>
-            <li><a href="/usertools/checkzaikosetting">在庫連携確認</a></li>
-            <li><a href="/Userlogzaikokousin">在庫連携履歴</a></li>
+            <li class="nav-header">在庫<i class=""></i></li>
             <li class="divider"></li>
             <li class="nav-header">棚卸<i class=""></i></li>
-            <li><a href="/User_zaiko_tanaorosi">棚卸開始</a></li>
             <li class="divider"></li>
             <li class="nav-header">商品ページ<i class="icon-cog"></i></li>
-            <li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">ページ管理<i class=""></i></a><ul class="dropdown-menu"><li><a href="/User_PagePlus_Index">商品ページ管理について</a></li><li><a href="/User_PagePlus_Syohin_New">新規登録</a></li><li><a href="/User_PagePlus_Syohin_Import">データ一括登録</a></li><li><a href="/User_PagePlus_Syohin_Edit">編集</a></li><li><a href="/User_PagePlus_Mst_Tenpocategory">店舗内カテゴリ</a></li><li><a href="/User_PagePlus_Mst_Morucategory">モールカテゴリ</a></li><li><a href="/User_PagePlus_Mst_Kihon">サイト情報</a></li><li><a href="/User_PagePlus_Conv_Module">項目変換パターン</a></li><li><a href="/User_PagePlus_Conv_Setting">項目変換設定</a></li><li><a href="/User_PagePlus_Syohin_Siteupload/amznSiteuploadResult">Amazonサイトアップロード結果</a></li></ul></li>
-            <li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">かんたんページ掲載<i class=""></i></a><ul class="dropdown-menu"><li><a href="/User_PagePlus_Simple_Import">一括登録</a></li><li><a href="/User_PagePlus_Simple_Input">入力</a></li><li><a href="/User_PagePlus_Simple_Status">状況表示</a></li></ul></li>
-
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">ページ管理<i class=""></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="/User_PagePlus_Index">商品ページ管理について</a></li>
+                <li><a href="/User_PagePlus_Syohin_New">新規登録</a></li>
+                <li><a href="/User_PagePlus_Syohin_Edit">編集</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
 
-
         <li class="divider-vertical nav-collapse"></li>
-
-
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">発注・仕入</span><i class="icon-signin"></i><b class="caret"></b></a>
-
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">発注・仕入</span><i class="fa fa-sign-in"></i><b class="caret"></b></a>
           <ul class="dropdown-menu">
-
             <li class="nav-header">発注<i class=""></i></li>
-            <li><a href="/Userhachu/button">発注計算</a></li>
-            <li><a href="/Userhachu">発注伝票管理</a></li>
-            <li><a href="/Userdownload/hdl">発注書ダウンロード</a></li>
+            <li><a href="/Userhachu">発注伝票作成</a></li>
+            <li><a href="/Userdownload/hdl">発注</a></li>
             <li class="divider"></li>
             <li class="nav-header">仕入<i class=""></i></li>
-            <li><a href="/Usersire">仕入伝票管理</a></li>
-            <li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">仕入先マスタ</a><ul class="dropdown-menu"><li><a href="/Usersearchsire">仕入先マスタ検索</a></li><li><a href="/Usermstsire">仕入先マスタ登録</a></li><li><a href="/Usercsvup/index?c=20">仕入先マスタ一括登録</a></li></ul></li>
+            <li><a href="/Usersire">受け入れ</a></li>
+            <li><a href="/Usersire">検品</a></li>            
             <li class="divider"></li>
             <li class="nav-header">返品<i class=""></i></li>
-            <li><a href="/Userhenpin">返品伝票管理</a></li>
-            <li><a href="/Userfuryo">不良品振替</a></li>
-
           </ul>
         </li>
-
-
+        
         <li class="divider-vertical nav-collapse"></li>
-
-
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">分析</span><i class="icon-bar-chart"></i><b class="caret"></b></a>
-
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">分析</span><i class="fa fa-bar-chart"></i><b class="caret"></b></a>
           <ul class="dropdown-menu">
-
             <li class="nav-header">照会<i class="icon-bar-chart"></i></li>
             <li><a href="/Userinspection">各種情報</a></li>
-            <li><a href="/Userinspection/uriage">売上情報</a></li>
-            <li><a href="/Userinspection/syohin">商品情報</a></li>
+            <li><a href="/Userinspection/uriage">受注</a></li>
+            <li><a href="/Userinspection/syohin">出荷</a></li>
+            <li><a href="/Userinspection/syohin">商品</a></li>
+            <li><a href="/Userinspection/syohin">発注・仕入れ</a></li>
             <li class="divider"></li>
             <li class="nav-header">ダウンロード<i class="icon-download-alt"></i></li>
             <li><a href="/Userinspection2">CSVファイル</a></li>
-
           </ul>
         </li>
 
-
         <li class="divider-vertical nav-collapse"></li>
-
-
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">設定</span><i class="icon-cog"></i><b class="caret"></b></a>
-
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">設定</span><i class="fa fa-cog"></i><b class="caret"></b></a>
           <ul class="dropdown-menu">
-
             <li class="nav-header">全体<i class="icon-wrench"></i></li>
-            <li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">基本</a><ul class="dropdown-menu"><li><a href="/User_basic_companysetting">企業</a></li><li><a href="/User_basic_shopsetting">店舗</a></li><li><a href="/User_basic_userset">担当者</a></li><li><a href="/User_basic_rolema">権限グループ</a></li><li><a href="/User_basic_batchset">自動実行処理</a></li><li><a href="/Userapiset">API</a></li><li><a href="/Userip">IPアドレス</a></li></ul></li>
-            <li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">受注</a><ul class="dropdown-menu"><li><a href="/Usercsvformat">受注一括登録パターン</a></li><li><a href="/Usercsvkakunin">受注確認内容</a></li><li><a href="/Usercsvbikou">備考欄変換</a></li><li><a href="/Usercsvdefault">規定値</a></li><li><a href="/Usercsvtesuryo">支払方法別手数料</a></li><li><a href="/Usercsvhenkan">支払発送変換</a></li><li><a href="/Userdateset">日付自動登録</a></li><li><a href="/Userdownload/nt">納品書テンプレート</a></li><li><a href="/Usercsvsyukka">出荷可能</a></li><li><a href="/Userjyuchutag">受注分類タグ</a></li><li><a href="/Usercsvfile">一括登録制限</a></li><li><a href="/Userkbnset">区分名称</a></li></ul></li>
-            <li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">商品</a><ul class="dropdown-menu"><li><a href="/Userzaikorule">在庫振り分け</a></li><li><a href="/Userhimoduke">商品コード紐付け</a></li><li><a href="/Usernoukikbnset">納期区分</a></li></ul></li>
-            <li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">発注・仕入</a><ul class="dropdown-menu"><li><a href="/Userdownload/ht">発注書テンプレート</a></li></ul></li>
-            <li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">メール</a><ul class="dropdown-menu"><li><a href="/Usermailset/svr">メールサーバ</a></li><li><a href="/Usermailset/sw">自動送信</a></li><li><a href="/Usermailset/time">送信時間</a></li><li><a href="/Usermailset/lv">購入回数</a></li><li><a href="/Usermailset/ml">メールアドレス・署名</a></li><li><a href="/Usermailset/temp">自動送信テンプレート</a></li><li><a href="/Usermailset/free">フリーメールテンプレート</a></li><li><a href="/Usermailset/siharai">支払方法別メッセージ</a></li><li><a href="/Usermailset/msg">独自タグ</a></li></ul></li>
-            <li><a href="/usersyohindel">マスタ削除</a></li>
-            <li><a href="/usersettingnavi">設定ナビ</a></li>
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">基本</a>
+              <ul class="dropdown-menu">
+                <li><a href="/User_basic_companysetting">企業</a></li>
+                <li><a href="/User_basic_shopsetting">店舗</a></li>
+                <li><a href="/User_basic_userset">担当者</a></li>
+                <li><a href="/User_basic_rolema">権限グループ</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">受注</a>
+              <ul class="dropdown-menu">
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">商品</a>
+              <ul class="dropdown-menu">
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">発注・仕入</a>
+              <ul class="dropdown-menu">
+                <li><a href="/Userdownload/ht">発注書テンプレート</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">メール</a>
+              <ul class="dropdown-menu">
+                <li><a href="/Usermailset/svr">メールアカウント</a></li>
+              </ul>
+            </li>
             <li><a href="/User_Basic_Othersetting">その他</a></li>
             <li class="divider"></li>
             <li class="nav-header">ダウンロード<i class="icon-download-alt"></i></li>
             <li><a href="/Userdownload/dlhis">履歴</a></li>
-
           </ul>
         </li>
 
 
         <li class="divider-vertical nav-collapse"></li>
-
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">アプリ</span><i class="icon-th-large"></i><b class="caret"></b></a>
-
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">アプリ</span><i class="fa fa-th-large"></i><b class="caret"></b></a>
           <ul class="dropdown-menu">
-
-            <li><a href="https://base.next-engine.org/apps/launch/?app_id=164" target="base_app_164">カスタムデータ作成</a></li>
-            <li><a href="https://base.next-engine.org/apps/launch/?app_id=109" target="base_app_109">在庫サポート</a></li>
-            <li><a href="https://base.next-engine.org/apps/launch/?app_id=74" target="base_app_74">AmazonFBA管理</a></li>
-            <li><a href="https://base.next-engine.org/apps/launch/?app_id=116" target="base_app_116">楽天検索順位チェッカー</a></li>
-            <li><a href="https://base.next-engine.org/apps/launch/?app_id=289" target="base_app_289">ヤフオク!全自動</a></li>
-            <li><a href="https://base.next-engine.org/apps/launch/?app_id=290" target="base_app_290">BASE全自動</a></li>
-
+            <li><a href="" target="_blank">本店</a></li>
+            <li><a href="" target="_blank">楽天市場</a></li>
+            <li><a href="" target="_blank">Yahoo!ショッピング</a></li>
+            <li><a href="" target="_blank">amazon</a></li>
+            <li><a href="" target="_blank">ヤフオク</a></li>
+            <li><a href="" target="_blank">メールワイズ</a></li>
+            <li><a href="" target="_blank">AWS</a></li>            
           </ul>
         </li>
-
-
-        <li class="divider-vertical nav-collapse"></li>
-
-
-        <!-- ウィンドウ幅が狭い時はこちらを表示 -->
-        <li class="dropdown visible-phone">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <i class="icon-phone"></i>
-            <span class="nav-collapse">03-4540-6274</span>
-            <b class="caret"></b>
-          </a>
-          <ul class="dropdown-menu">
-            <div class="container-fluid">
-              <p>
-              <div class="alert alert-info">
-                <strong><p>お問い合わせ</p></strong>
-                <i class="icon-phone"></i>03-4540-6274
-                <span>平日10:30～17:30 (定休日：土曜/日曜/祝祭日)</span>
-              </div>
-              <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=250&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=next-engine.info_6kd2a2i3uv3h8dl962vbsgr5v4%40group.calendar.google.com&amp;color=%23B1440E&amp;src=ja.japanese%23holiday%40group.v.calendar.google.com&amp;color=%23A32929&amp;ctz=Asia%2FTokyo" style=" border-width:0 " width="650" height="250" frameborder="0" scrolling="no"></iframe>
-              </p>
-            </div>
-          </ul>
-        </li>
-
-        <li class="dropdown visible-phone">
-          <a href="#" class="dropdown-toggle navicon" data-toggle="dropdown">
-            <small>
-              <i class="icon-user icon-2x"></i>
-            </small>
-          </a>
-          <ul class="dropdown-menu">
-            <li class="nav-header"><i class="icon-credit-card"></i>企業ID</li>
-            <li><p class="user-prop">6139847</p></li>
-            <li class="divider"></li>
-
-            <li class="nav-header"><i class="icon-home"></i>企業名</li>
-            <li><p class="user-prop">大東物産株式会社</p></li>
-            <li class="divider"></li>
-
-            <li class="nav-header"><i class="icon-home"></i>ユーザ名</li>
-            <li><p class="user-prop">柿木勝之</p></li>
-            <li class="divider"></li>
-
-            <li class="nav-header"><i class="icon-tint"></i>カラースキン</li>
-            <li id="chg-skin-xs" class="js-chg-skin">
-              <ul>
-                <span style="color:#0099ff;font-size:30px;cursor:pointer;" class="skin" id="ne">■</span>
-                <span style="color:#f3f3f3;font-size:30px;cursor:pointer;" class="skin" id="min">■</span>
-                <span style="color:#ff594b;font-size:30px;cursor:pointer;" class="skin" id="red">■</span>
-                <span style="color:#9bc301;font-size:30px;cursor:pointer;" class="skin" id="green">■</span>
-                <span style="color:#fff100;font-size:30px;cursor:pointer;" class="skin" id="yellow">■</span>
-              </ul>
-              <ul>
-                <span style="color:#a7dcf4;font-size:30px;cursor:pointer;" class="skin" id="light-blue">■</span>
-                <span style="color:#d6cbe4;font-size:30px;cursor:pointer;" class="skin" id="light-purple">■</span>
-                <span style="color:#ffbac1;font-size:30px;cursor:pointer;" class="skin" id="light-red">■</span>
-                <span style="color:#b3eadb;font-size:30px;cursor:pointer;" class="skin" id="light-green">■</span>
-                <span style="color:#fcf6a0;font-size:30px;cursor:pointer;" class="skin" id="light-yellow">■</span>
-              </ul>
-              <ul>
-                <span style="color:#004e71;font-size:30px;cursor:pointer;" class="skin" id="dark-blue">■</span>
-                <span style="color:#b80000;font-size:30px;cursor:pointer;" class="skin" id="dark-red">■</span>
-                <span style="color:#20613d;font-size:30px;cursor:pointer;" class="skin" id="dark-green">■</span>
-                <span style="color:#8c7d51;font-size:30px;cursor:pointer;" class="skin" id="dark-yellow">■</span>
-                <span style="color:#3b3b3b;font-size:30px;cursor:pointer;" class="skin" id="dark">■</span>
-              </ul>
-            </li>
-
-
-            <li class="divider"></li>
-
-            <li id="ux-logout"><a href="#"><i class="icon-off"></i> ログアウト</a></li>
-
-          </ul>
-        </li>
-
       </ul><!-- /.nav -->
-
-      <!-- ウィンドウ幅が広い時はこちらを表示 -->
-      <ul class="nav pull-right">
-        <li class="dropdown hidden-phone">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <i class="icon-phone"></i>
-            <span class="nav-collapse">03-4540-6274</span>
-            <b class="caret"></b>
-          </a>
-          <ul class="dropdown-menu">
-            <div class="container-fluid">
-              <p>
-              <div class="alert alert-info">
-                <strong><p>お問い合わせ</p></strong>
-                <i class="icon-phone"></i>03-4540-6274
-                <span>平日10:30～17:30 (定休日：土曜/日曜/祝祭日)</span>
-              </div>
-              <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=250&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=next-engine.info_6kd2a2i3uv3h8dl962vbsgr5v4%40group.calendar.google.com&amp;color=%23B1440E&amp;src=ja.japanese%23holiday%40group.v.calendar.google.com&amp;color=%23A32929&amp;ctz=Asia%2FTokyo" style=" border-width:0 " width="650" height="250" frameborder="0" scrolling="no"></iframe>
-              </p>
-            </div>
-          </ul>
-        </li>
-
-        <li class="dropdown hidden-phone">
-          <a href="#" class="dropdown-toggle navicon" data-toggle="dropdown">
-            <small>
-              <i class="icon-user icon-2x"></i>
-            </small>
-          </a>
-          <ul class="dropdown-menu">
-            <li class="nav-header"><i class="icon-credit-card"></i>企業ID</li>
-            <li><p class="user-prop">6139847</p></li>
-            <li class="divider"></li>
-
-            <li class="nav-header"><i class="icon-home"></i>企業名</li>
-            <li><p class="user-prop">大東物産株式会社</p></li>
-            <li class="divider"></li>
-
-            <li class="nav-header"><i class="icon-home"></i>ユーザ名</li>
-            <li><p class="user-prop">柿木勝之</p></li>
-            <li class="divider"></li>
-
-            <li class="nav-header"><i class="icon-tint"></i>カラースキン</li>
-            <li id="chg-skin-sm" class="js-chg-skin">
-              <ul>
-                <span style="color:#0099ff;font-size:30px;cursor:pointer;" class="skin" id="ne">■</span>
-                <span style="color:#f3f3f3;font-size:30px;cursor:pointer;" class="skin" id="min">■</span>
-                <span style="color:#ff594b;font-size:30px;cursor:pointer;" class="skin" id="red">■</span>
-                <span style="color:#9bc301;font-size:30px;cursor:pointer;" class="skin" id="green">■</span>
-                <span style="color:#fff100;font-size:30px;cursor:pointer;" class="skin" id="yellow">■</span>
-              </ul>
-              <ul>
-                <span style="color:#a7dcf4;font-size:30px;cursor:pointer;" class="skin" id="light-blue">■</span>
-                <span style="color:#d6cbe4;font-size:30px;cursor:pointer;" class="skin" id="light-purple">■</span>
-                <span style="color:#ffbac1;font-size:30px;cursor:pointer;" class="skin" id="light-red">■</span>
-                <span style="color:#b3eadb;font-size:30px;cursor:pointer;" class="skin" id="light-green">■</span>
-                <span style="color:#fcf6a0;font-size:30px;cursor:pointer;" class="skin" id="light-yellow">■</span>
-              </ul>
-              <ul>
-                <span style="color:#004e71;font-size:30px;cursor:pointer;" class="skin" id="dark-blue">■</span>
-                <span style="color:#b80000;font-size:30px;cursor:pointer;" class="skin" id="dark-red">■</span>
-                <span style="color:#20613d;font-size:30px;cursor:pointer;" class="skin" id="dark-green">■</span>
-                <span style="color:#8c7d51;font-size:30px;cursor:pointer;" class="skin" id="dark-yellow">■</span>
-                <span style="color:#3b3b3b;font-size:30px;cursor:pointer;" class="skin" id="dark">■</span>
-              </ul>
-            </li>
-
-
-            <li class="divider"></li>
-
-            <li id="ux-logout"><a href="#"><i class="icon-off"></i> ログアウト</a></li>
-
-          </ul>
-        </li>
-      </ul>
     </div>
   </div><!-- /.navbar-inner -->
 </div><!-- /.navbar -->
