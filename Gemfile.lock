@@ -58,6 +58,8 @@ GEM
     faraday_middleware (0.9.1)
       faraday (>= 0.7.4, < 0.10)
     ffi (1.9.8)
+    font-awesome-sass (4.3.2.1)
+      sass (~> 3.2)
     formatador (0.2.5)
     guard (2.12.5)
       formatador (>= 0.2.4)
@@ -173,6 +175,7 @@ DEPENDENCIES
   coffee-script
   compass
   dotenv
+  font-awesome-sass (~> 4.3.0)
   guard
   guard-coffeescript
   guard-compass
