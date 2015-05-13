@@ -3,6 +3,7 @@ source "https://rubygems.org"
 
 gem 'bootstrap-sass'
 gem 'compass'
+gem 'font-awesome-sass', '~> 4.3.0'
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'coffee-script'
