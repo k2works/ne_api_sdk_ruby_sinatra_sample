@@ -47,6 +47,9 @@
             <li class="dropdown-submenu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">受注内容確認</a>
               <ul class="dropdown-menu">
+                <li><a href="/Usermailsend/nyukin">CSVファイルダウンロード</a></li>
+                <li><a href="/Usermailsend/nyukin">NextEngine受注伝票アップロード</a></li>
+                <li><a href="/Usermailsend/nyukin">NextEngine用エラーチェック</a></li>
                 <li><a href="/Usermailsend/nyukin">備考一括確認</a></li>
                 <li><a href="/Usermailsend/free">連絡メール</a></li>
               </ul>
@@ -57,12 +60,13 @@
                 <li><a href="/Usermailsend/nyukin">在庫一括CSVダウンロード</a></li>
                 <li><a href="/Usermailsend/free">商品マスタ一括登録</a></li>
               </ul>
-            </li>            
+            </li>
             <li class="dropdown-submenu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">入金確認</a>
               <ul class="dropdown-menu">
-                <li><a href="/Usermailsend/nyukin">入金登録</a></li>
+                <li><a href="/Usermailsend/nyukin">一括入金用CSVダウンロード</a></li>
                 <li><a href="/Usermailsend/free">一括入金処理</a></li>
+                <li><a href="/Usermailsend/nyukin">入金登録</a></li>
                 <li><a href="/Usermailstat/stat">入金確認メール</a></li>
               </ul>
             </li>
@@ -71,7 +75,7 @@
               <ul class="dropdown-menu">
                 <li><a href="/Usermailsend/nyukin">受注確認メール</a></li>
               </ul>
-            </li>                        
+            </li>
           </ul>
         </li>
 
@@ -86,8 +90,9 @@
                 <li><a href="/Usermailsend/nyukin">便種振り分け</a></li>
                 <li><a href="/Usermailsend/free">CSVファイルダウンロード</a></li>
                 <li><a href="/Usermailstat/stat">NextEngine受注伝票アップロード</a></li>
+                <li><a href="/Usermailsend/nyukin">NextEngine用エラーチェック</a></li>
                 <li><a href="/Usermailstat/log">受注残ダウンロード</a></li>
-                <li><a href="/Usermailstat/log">ピッキングリスト印刷</a></li>                
+                <li><a href="/Usermailstat/log">ピッキングリスト印刷</a></li>
               </ul>
             </li>
             <li class="dropdown-submenu">
@@ -97,18 +102,11 @@
               </ul>
             </li>
             <li class="dropdown-submenu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">出荷案内</a>
-              <ul class="dropdown-menu">
-                <li><a href="/Usermailsend/nyukin">配送番号反映</a></li>
-                <li><a href="/Usermailsend/free">発送連絡メールの送信</a></li>
-                <li><a href="/Usermailstat/stat">発送済みメールの確認</a></li>
-              </ul>
-            </li>            
-            <li class="dropdown-submenu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">送り状作成</a>
               <ul class="dropdown-menu">
                 <li><a href="/Usermailsend/nyukin">CSVファイルダウンロード</a></li>
                 <li><a href="/Usermailsend/free">NextEngine受注伝票アップロード</a></li>
+                <li><a href="/Usermailsend/free">NextEngine用エラーチェック</a></li>
                 <li><a href="/Usermailstat/stat">受注残ダウンロード</a></li>
                 <li><a href="/Usermailstat/log">運送会社振り分け</a></li>
                 <li><a href="/Usermailsend/nyukin">出荷確定処理</a></li>
@@ -119,120 +117,135 @@
                 <li><a href="/Usermailsend/free">配送情報の印刷</a></li>
               </ul>
             </li>
-            <li class="divider"></li>                      
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">出荷案内</a>
+              <ul class="dropdown-menu">
+                <li><a href="/Usermailsend/nyukin">配送番号反映</a></li>
+                <li><a href="/Usermailsend/free">発送連絡メールの送信</a></li>
+                <li><a href="/Usermailstat/stat">発送済みメールの確認</a></li>
+              </ul>
+            </li>
+            <li class="divider"></li>
             <li class="nav-header">売上<i class=""></i></li>
-            <li><a href="/Usermailsend/nyukin">売上確定</a></li>            
-            </li>
-            <li class="divider"></li>            
-          </ul>
-        </li>
-
-        <li class="divider-vertical nav-collapse"></li>
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">商品</span><i class="fa fa-gift"></i><b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li class="nav-header">商品<i class=""></i></li>
-            <li><a href="/Usersearchsyohin">商品登録</a></li>
-            <li><a href="/Usercsvupque">商品情報更新</a></li>
-            <li class="divider"></li>
-            <li class="nav-header">在庫<i class=""></i></li>
-            <li class="divider"></li>
-            <li class="nav-header">棚卸<i class=""></i></li>
-            <li class="divider"></li>
-            <li class="nav-header">商品ページ<i class="icon-cog"></i></li>
             <li class="dropdown-submenu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">ページ管理<i class=""></i></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">売上</a>
               <ul class="dropdown-menu">
-                <li><a href="/User_PagePlus_Index">商品ページ管理について</a></li>
-                <li><a href="/User_PagePlus_Syohin_New">新規登録</a></li>
-                <li><a href="/User_PagePlus_Syohin_Edit">編集</a></li>
+                <li><a href="/Usermailsend/nyukin">CSVファイルダウンロード</a></li>
+                <li><a href="/Usermailsend/free">NextEngine受注伝票アップロード</a></li>
+                <li><a href="/Usermailstat/stat">売上確定</a></li>
               </ul>
             </li>
+            <li class="divider"></li>
           </ul>
         </li>
 
-        <li class="divider-vertical nav-collapse"></li>
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">発注・仕入</span><i class="fa fa-sign-in"></i><b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li class="nav-header">発注<i class=""></i></li>
-            <li><a href="/Userhachu">発注伝票作成</a></li>
-            <li><a href="/Userdownload/hdl">発注</a></li>
-            <li class="divider"></li>
-            <li class="nav-header">仕入<i class=""></i></li>
-            <li><a href="/Usersire">受け入れ</a></li>
-            <li><a href="/Usersire">検品</a></li>            
-            <li class="divider"></li>
-            <li class="nav-header">返品<i class=""></i></li>
-          </ul>
-        </li>
-        
-        <li class="divider-vertical nav-collapse"></li>
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">分析</span><i class="fa fa-bar-chart"></i><b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li class="nav-header">照会<i class="icon-bar-chart"></i></li>
-            <li><a href="/Userinspection">各種情報</a></li>
-            <li><a href="/Userinspection/uriage">受注</a></li>
-            <li><a href="/Userinspection/syohin">出荷</a></li>
-            <li><a href="/Userinspection/syohin">商品</a></li>
-            <li><a href="/Userinspection/syohin">発注・仕入れ</a></li>
-            <li class="divider"></li>
-            <li class="nav-header">ダウンロード<i class="icon-download-alt"></i></li>
-            <li><a href="/Userinspection2">CSVファイル</a></li>
-          </ul>
-        </li>
+      <li class="divider-vertical nav-collapse"></li>
+      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">商品</span><i class="fa fa-gift"></i><b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li class="nav-header">商品<i class=""></i></li>
+          <li><a href="/Usersearchsyohin">商品登録</a></li>
+          <li><a href="/Usercsvupque">商品情報更新</a></li>
+          <li class="divider"></li>
+          <li class="nav-header">在庫<i class=""></i></li>
+          <li class="divider"></li>
+          <li class="nav-header">棚卸<i class=""></i></li>
+          <li class="divider"></li>
+          <li class="nav-header">商品ページ<i class="icon-cog"></i></li>
+          <li class="dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ページ管理<i class=""></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="/User_PagePlus_Index">商品ページ管理について</a></li>
+              <li><a href="/User_PagePlus_Syohin_New">新規登録</a></li>
+              <li><a href="/User_PagePlus_Syohin_Edit">編集</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
 
-        <li class="divider-vertical nav-collapse"></li>
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">設定</span><i class="fa fa-cog"></i><b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li class="nav-header">全体<i class="icon-wrench"></i></li>
-            <li class="dropdown-submenu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">基本</a>
-              <ul class="dropdown-menu">
-                <li><a href="/User_basic_companysetting">企業</a></li>
-                <li><a href="/User_basic_shopsetting">店舗</a></li>
-                <li><a href="/User_basic_userset">担当者</a></li>
-                <li><a href="/User_basic_rolema">権限グループ</a></li>
-              </ul>
-            </li>
-            <li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">受注</a>
-              <ul class="dropdown-menu">
-              </ul>
-            </li>
-            <li class="dropdown-submenu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">商品</a>
-              <ul class="dropdown-menu">
-              </ul>
-            </li>
-            <li class="dropdown-submenu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">発注・仕入</a>
-              <ul class="dropdown-menu">
-                <li><a href="/Userdownload/ht">発注書テンプレート</a></li>
-              </ul>
-            </li>
-            <li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">メール</a>
-              <ul class="dropdown-menu">
-                <li><a href="/Usermailset/svr">メールアカウント</a></li>
-              </ul>
-            </li>
-            <li><a href="/User_Basic_Othersetting">その他</a></li>
-            <li class="divider"></li>
-            <li class="nav-header">ダウンロード<i class="icon-download-alt"></i></li>
-            <li><a href="/Userdownload/dlhis">履歴</a></li>
-          </ul>
-        </li>
+      <li class="divider-vertical nav-collapse"></li>
+      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">発注・仕入</span><i class="fa fa-sign-in"></i><b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li class="nav-header">発注<i class=""></i></li>
+          <li><a href="/Userhachu">発注伝票作成</a></li>
+          <li><a href="/Userdownload/hdl">発注</a></li>
+          <li class="divider"></li>
+          <li class="nav-header">仕入<i class=""></i></li>
+          <li><a href="/Usersire">受け入れ</a></li>
+          <li><a href="/Usersire">検品</a></li>
+          <li class="divider"></li>
+          <li class="nav-header">返品<i class=""></i></li>
+        </ul>
+      </li>
+
+      <li class="divider-vertical nav-collapse"></li>
+      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">分析</span><i class="fa fa-bar-chart"></i><b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li class="nav-header">照会<i class="icon-bar-chart"></i></li>
+          <li><a href="/Userinspection">各種情報</a></li>
+          <li><a href="/Userinspection/uriage">受注</a></li>
+          <li><a href="/Userinspection/syohin">出荷</a></li>
+          <li><a href="/Userinspection/syohin">商品</a></li>
+          <li><a href="/Userinspection/syohin">発注・仕入れ</a></li>
+          <li class="divider"></li>
+          <li class="nav-header">ダウンロード<i class="icon-download-alt"></i></li>
+          <li><a href="/Userinspection2">CSVファイル</a></li>
+        </ul>
+      </li>
+
+      <li class="divider-vertical nav-collapse"></li>
+      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">設定</span><i class="fa fa-cog"></i><b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li class="nav-header">全体<i class="icon-wrench"></i></li>
+          <li class="dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">基本</a>
+            <ul class="dropdown-menu">
+              <li><a href="/User_basic_companysetting">企業</a></li>
+              <li><a href="/User_basic_shopsetting">店舗</a></li>
+              <li><a href="/User_basic_userset">担当者</a></li>
+              <li><a href="/User_basic_rolema">権限グループ</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">受注</a>
+            <ul class="dropdown-menu">
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">商品</a>
+            <ul class="dropdown-menu">
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">発注・仕入</a>
+            <ul class="dropdown-menu">
+              <li><a href="/Userdownload/ht">発注書テンプレート</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">メール</a>
+            <ul class="dropdown-menu">
+              <li><a href="/Usermailset/svr">メールアカウント</a></li>
+            </ul>
+          </li>
+          <li><a href="/User_Basic_Othersetting">その他</a></li>
+          <li class="divider"></li>
+          <li class="nav-header">ダウンロード<i class="icon-download-alt"></i></li>
+          <li><a href="/Userdownload/dlhis">履歴</a></li>
+        </ul>
+      </li>
 
 
-        <li class="divider-vertical nav-collapse"></li>
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">アプリ</span><i class="fa fa-th-large"></i><b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="" target="_blank">本店</a></li>
-            <li><a href="" target="_blank">楽天市場</a></li>
-            <li><a href="" target="_blank">Yahoo!ショッピング</a></li>
-            <li><a href="" target="_blank">amazon</a></li>
-            <li><a href="" target="_blank">ヤフオク</a></li>
-            <li><a href="" target="_blank">メールワイズ</a></li>
-            <li><a href="" target="_blank">AWS</a></li>            
-          </ul>
-        </li>
+      <li class="divider-vertical nav-collapse"></li>
+      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">アプリ</span><i class="fa fa-th-large"></i><b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="" target="_blank">HCOSS</a></li>
+          <li><a href="" target="_blank">本店</a></li>
+          <li><a href="" target="_blank">楽天市場</a></li>
+          <li><a href="" target="_blank">Yahoo!ショッピング</a></li>
+          <li><a href="" target="_blank">amazon</a></li>
+          <li><a href="" target="_blank">ヤフオク</a></li>
+          <li><a href="" target="_blank">メールワイズ</a></li>
+          <li><a href="" target="_blank">AWS</a></li>
+        </ul>
+      </li>
       </ul><!-- /.nav -->
     </div>
   </div><!-- /.navbar-inner -->
