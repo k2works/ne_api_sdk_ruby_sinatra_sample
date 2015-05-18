@@ -65,6 +65,21 @@ module DemoSite
         :layout_options => {:views => settings.layouts_dir}
     end
 
+    get '/delivery_method/' do
+      @page_name = 'delivery_method'
+      @page_title = '便種振り分け'
+      slim :delivery_method,
+           :layout => :full_width,
+           :layout_options => {:views => settings.layouts_dir}
+    end
+
+    get '/picking_list/' do
+      @page_name = 'picking_list'
+      @page_title = 'ピッキングリスト印刷'
+      slim :delivery_method,
+           :layout => :full_width,
+           :layout_options => {:views => settings.layouts_dir}
+    end
 
     # Routes for pages that have unique things...
 
