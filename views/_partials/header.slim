@@ -5,57 +5,454 @@ html[lang="en"]
     meta[http-equiv="X-UA-Compatible" content="IE=edge"]
     meta[name="viewport" content="width=device-width, initial-scale=1"]
     title
-      - if @page_title
-        = @page_title
-        |  (YOUR SITE NAME)
-      - else
-        | YOUR SITE NAME
-    |  <link href="
-    = url('/css/styles.css')
-    | " rel="stylesheet"> 
+      | <% if @page_title %><%= @page_title %> (YOUR SITE NAME)<% else %>YOUR SITE NAME<% end %>
+    link[href="<%= url('/css/styles.css') %>" rel="stylesheet"]
   body
-    nav.navbar.navbar-default[role="navigation"]
-      .navbar-header
-        button.navbar-toggle[type="button" data-toggle="collapse" data-target="#navbar"]
-          span.sr-only
-            | Toggle navigation
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-        |  <a class="navbar-brand" href="
-        = url('/')
-        | " title="To the front page">
-        span
-          | Site title
-      #navbar.collapse.navbar-collapse
-        ul.nav.navbar-nav.navbar-right
-          |  <li class="
-          - if @page_name == 'home'
-            | active active-unlink
-          | "><a href="
-          = url('/')
-          | ">Home
-          |  <li class="dropdown 
-          - if @page_name =~ /^help/
-            | active
-            - if @page_name == 'help'
-              |  active-unlink
-          | "> 
-        a.dropdown-toggle[href="#" data-toggle="dropdown"]
-          | Help 
-          b.caret
-        ul.dropdown-menu
-          li
-            | <a href="
-            = url('/help/')
-            | ">Introduction
-          li
-            | <a href="
-            = url('/help/accounts/')
-            | ">Accounts
-        |  <li class="
-        - if @page_name == 'special'
-          | active active-unlink
-        | "><a href="
-        = url('/special/')
-        | ">Special
+    input#manual-page-url[type="hidden" value="http://manual.next-engine.info/198/198-49"]
+    .navbar.navbar-static-top
+      .navbar-inner
+        .container-fluid
+          ul#ne_topmenu.nav
+            li
+              a[href="/"]
+                i.fa.fa-home.fa-lg
+            li.divider-vertical.nav-collapse
+            li.dropdown
+              a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                span.nav-collapse
+                  | 受注
+                i.fa.fa-list-alt
+                b.caret
+              ul.dropdown-menu
+                li
+                  a[href="https://healthy.cybozu.com/login" target="_blank"]
+                    | 問い合わせ
+                li.dropdown-submenu
+                  a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                    | 受注取り込み
+                  ul.dropdown-menu
+                    li.dropdown-submenu
+                      a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                        | 受注メール取込設定
+                      ul.dropdown-menu
+                        li
+                          a[href="http://manual.next-engine.info/top/esutoa-shoppusabu/105-1" target="_blank"]
+                            | 本店
+                        li
+                          a[href="http://manual.next-engine.info/top/121/121-3" target="_blank"]
+                            | 楽天
+                        li
+                          a[href="http://manual.next-engine.info/top/136/136-2" target="_blank"]
+                            | Yahoo!ショッピング
+                        li
+                          a[href="http://manual.next-engine.info/top/amazon/101-2" target="_blank"]
+                            | amazon
+                    li.dropdown-submenu
+                      a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                        | 受注CSVダウンロード
+                      ul.dropdown-menu
+                        li
+                          a[href="" target="_blank"]
+                            | 本店
+                        li
+                          a[href="" target="_blank"]
+                            | 楽天
+                        li
+                          a[href="https://pro.store.yahoo.co.jp/pro.healthy-c/order/manage/index" target="_blank"]
+                            | Yahoo!ショッピング
+                        li
+                          a[href="" target="_blank"]
+                            | amazon
+                        li
+                          a[href="http://manual.next-engine.info/top/amazon/101-2" target="_blank"]
+                            | ヤフオク
+                    li
+                      a[href="<%= settings.ap_ne_server %>/Usercsv" target="_blank"]
+                        | 受注一括登録
+                    li
+                      a[href="<%= settings.ap_ne_server %>/Userapiset" target="_blank"]
+                        | 受注API
+                li.dropdown-submenu
+                  a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                    | 受注内容確認
+                  ul.dropdown-menu
+                    li
+                      a[href="<%= settings.ap_ne_server %>/Userinspection2" target="_blank"]
+                        | CSVファイルダウンロード
+                    li
+                      a[href="<%= settings.ap_server %>/next_engine_order_uploads/new" target="_blank"]
+                        | NextEngine受注伝票アップロード
+                    li
+                      a[href="<%= settings.ap_server %>/business_operation_errors/index" target="_blank"]
+                        | NextEngine用エラーチェック
+                    li
+                      a[href="<%= settings.ap_ne_server %>/Userbikoukakunin" target="_blank"]
+                        | 備考一括確認
+                    li
+                      a[href="<%= settings.ap_ne_server %>/Userjyuchu/index?search_condi=12" target="_blank"]
+                        | 伝票確認チェック
+                    li
+                      a[href="<%= settings.ap_ne_server %>/Usermailsend/free" target="_blank"]
+                        | 連絡メール
+                li.dropdown-submenu
+                  a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                    | 引当
+                  ul.dropdown-menu
+                    li
+                      a[href="<%= settings.ap_ne_server %>/Userinspection2" target="_blank"]
+                        | CSVファイルダウンロード
+                    li
+                      a[href="<%= settings.ap_server %>/next_engine_order_uploads/new" target="_blank"]
+                        | NextEngine受注伝票アップロード
+                    li
+                      a[href="<%= settings.ap_server %>/back_order_next_engine_stock/index" target="_blank"]
+                        | 在庫一括CSVダウンロード
+                    li
+                      a[href="<%= settings.ap_ne_server %>/Usercsvupque" target="_blank"]
+                        | 商品マスタ一括登録
+                li.dropdown-submenu
+                  a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                    | 入金確認
+                  ul.dropdown-menu
+                    li
+                      a[href="<%= settings.ap_server %>/deposit_summarize/index" target="_blank"]
+                        | 一括入金用CSVダウンロード
+                    li
+                      a[href="<%= settings.ap_ne_server %>/usertools/nyuukin" target="_blank"]
+                        | 一括入金処理
+                    li
+                      a[href="<%= settings.ap_ne_server %>/Userurikake/nyukinInsInit" target="_blank"]
+                        | 入金登録
+                    li
+                      a[href="<%= settings.ap_ne_server %>/Usermailsend/nyukin" target="_blank"]
+                        | 入金確認メール
+                li.dropdown-submenu
+                  a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                    | 受注確認
+                  ul.dropdown-menu
+                    li
+                      a[href="<%= settings.ap_ne_server %>/Usermailstat/stat" target="_blank"]
+                        | 受注確認メール
+            li.divider-vertical.nav-collapse
+            li.dropdown
+              a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                span.nav-collapse
+                  | 出荷
+                i.fa.fa-truck
+                b.caret
+              ul.dropdown-menu
+                li.nav-header
+                  | 出荷
+                  i
+                li.dropdown-submenu
+                  a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                    | ピッキングリスト作成
+                  ul.dropdown-menu
+                    li
+                      a[href="/delivery_method/"]
+                        | 便種振り分け
+                    li
+                      a[href="<%= settings.ap_ne_server %>/Userinspection2" target="_blank"]
+                        | CSVファイルダウンロード
+                    li
+                      a[href="<%= settings.ap_server %>/next_engine_order_uploads/new" target="_blank"]
+                        | NextEngine受注伝票アップロード
+                    li
+                      a[href="<%= settings.ap_server %>/business_operation_errors/index" target="_blank"]
+                        | NextEngine用エラーチェック
+                    li
+                      a[href="<%= settings.ap_server %>/back_orders/detail" target="_blank"]
+                        | 受注残ダウンロード
+                    li
+                      a[href="/picking_list"]
+                        | ピッキングリスト印刷
+                li
+                  a[href="/"]
+                    | ピッキング
+                li.dropdown-submenu
+                  a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                    | 納品書作成
+                  ul.dropdown-menu
+                    li
+                      a[href="<%= settings.ap_ne_server %>/Userdownload/ndl" target="_blank"]
+                        | 納品書ダウンロード
+                li.dropdown-submenu
+                  a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                    | 送り状作成
+                  ul.dropdown-menu
+                    li
+                      a[href="<%= settings.ap_ne_server %>/Userinspection2" target="_blank"]
+                        | CSVファイルダウンロード
+                    li
+                      a[href="<%= settings.ap_server %>/next_engine_order_uploads/new" target="_blank"]
+                        | NextEngine受注伝票アップロード
+                    li
+                      a[href="<%= settings.ap_server %>/business_operation_errors/index" target="_blank"]
+                        | NextEngine用エラーチェック
+                    li
+                      a[href="<%= settings.ap_server %>/shipment_confirmations/detail" target="_blank"]
+                        | 受注残ダウンロード
+                    li
+                      a[href="<%= settings.ap_server %>/shipment_confirmations/summary" target="_blank"]
+                        | 運送会社振り分け
+                    li
+                      a[href="<%= settings.ap_ne_server %>/Userjyuchu/index?search_condi=18" target="_blank"]
+                        | 出荷確定処理
+                    li
+                      a[href="<%= settings.ap_ne_server %>/Userdownload/haisoudl" target="_blank"]
+                        | 配送情報ダウンロード
+                    li
+                      a[href=""]
+                        | ゆうぱっくプリントR
+                    li
+                      a[href=""]
+                        | B2
+                    li
+                      a[href=""]
+                        | e飛伝2
+                    li
+                      a[href=""]
+                        | 配送情報の印刷
+                li
+                  a[href="/"]
+                    | 梱包
+                li
+                  a[href="/"]
+                    | 出荷
+                li.dropdown-submenu
+                  a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                    | 出荷案内
+                  ul.dropdown-menu
+                    li
+                      a[href="<%= settings.ap_ne_server %>/Userhaisouhanei" target="_blank"]
+                        | 配送番号反映
+                    li
+                      a[href="<%= settings.ap_ne_server %>/Usermailstat/stat" target="_blank"]
+                        | 発送連絡メールの送信
+                    li
+                      a[href="<%= settings.ap_ne_server %>/Usermailstat/log" target="_blank"]
+                        | 発送済みメールの確認
+                li.divider
+                li.nav-header
+                  | 売上
+                  i
+                li.dropdown-submenu
+                  a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                    | 売上
+                  ul.dropdown-menu
+                    li
+                      a[href="<%= settings.ap_ne_server %>/Userinspection2" target="_blank"]
+                        | CSVファイルダウンロード
+                    li
+                      a[href="<%= settings.ap_server %>/next_engine_order_uploads/new" target="_blank"]
+                        | NextEngine受注伝票アップロード
+                    li
+                      a[href="<%= settings.ap_server %>/sales/summary" target="_blank"]
+                        | 売上集計
+                    li
+                      a[href="<%= settings.ap_server %>/sales/summary" target="_blank"]
+                        | 売上確定
+                li.divider
+            li.divider-vertical.nav-collapse
+            li.dropdown
+              a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                span.nav-collapse
+                  | 商品
+                i.fa.fa-gift
+                b.caret
+              ul.dropdown-menu
+                li.nav-header
+                  | 商品
+                  i
+                li
+                  a[href="/Usersearchsyohin"]
+                    | 商品登録
+                li
+                  a[href="/Usercsvupque"]
+                    | 商品情報更新
+                li.divider
+                li.nav-header
+                  | 在庫
+                  i
+                li.divider
+                li.nav-header
+                  | 棚卸
+                  i
+                li.divider
+                li.nav-header
+                  | 商品ページ
+                  i.icon-cog
+                li.dropdown-submenu
+                  a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                    | ページ管理
+                    i
+                  ul.dropdown-menu
+                    li
+                      a[href="/User_PagePlus_Index"]
+                        | 商品ページ管理について
+                    li
+                      a[href="/User_PagePlus_Syohin_New"]
+                        | 新規登録
+                    li
+                      a[href="/User_PagePlus_Syohin_Edit"]
+                        | 編集
+            li.divider-vertical.nav-collapse
+            li.dropdown
+              a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                span.nav-collapse
+                  | 発注・仕入
+                i.fa.fa-sign-in
+                b.caret
+              ul.dropdown-menu
+                li.nav-header
+                  | 発注
+                  i
+                li
+                  a[href="/Userhachu"]
+                    | 発注伝票作成
+                li
+                  a[href="/Userdownload/hdl"]
+                    | 発注
+                li.divider
+                li.nav-header
+                  | 仕入
+                  i
+                li
+                  a[href="/Usersire"]
+                    | 受け入れ
+                li
+                  a[href="/Usersire"]
+                    | 検品
+                li.divider
+                li.nav-header
+                  | 返品
+                  i
+            li.divider-vertical.nav-collapse
+            li.dropdown
+              a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                span.nav-collapse
+                  | 分析
+                i.fa.fa-bar-chart
+                b.caret
+              ul.dropdown-menu
+                li.nav-header
+                  | 照会
+                  i.icon-bar-chart
+                li
+                  a[href="/Userinspection"]
+                    | 各種情報
+                li
+                  a[href="/Userinspection/uriage"]
+                    | 受注
+                li
+                  a[href="/Userinspection/syohin"]
+                    | 出荷
+                li
+                  a[href="/Userinspection/syohin"]
+                    | 商品
+                li
+                  a[href="/Userinspection/syohin"]
+                    | 発注・仕入れ
+                li.divider
+                li.nav-header
+                  | ダウンロード
+                  i.icon-download-alt
+                li
+                  a[href="/Userinspection2"]
+                    | CSVファイル
+            li.divider-vertical.nav-collapse
+            li.dropdown
+              a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                span.nav-collapse
+                  | 設定
+                i.fa.fa-cog
+                b.caret
+              ul.dropdown-menu
+                li.nav-header
+                  | 全体
+                  i.icon-wrench
+                li.dropdown-submenu
+                  a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                    | 基本
+                  ul.dropdown-menu
+                    li
+                      a[href="/User_basic_companysetting"]
+                        | 企業
+                    li
+                      a[href="/User_basic_shopsetting"]
+                        | 店舗
+                    li
+                      a[href="/User_basic_userset"]
+                        | 担当者
+                    li
+                      a[href="/User_basic_rolema"]
+                        | 権限グループ
+                li.dropdown-submenu
+                  a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                    | 受注
+                  ul.dropdown-menu
+
+                li.dropdown-submenu
+                  a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                    | 商品
+                  ul.dropdown-menu
+
+                li.dropdown-submenu
+                  a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                    | 発注・仕入
+                  ul.dropdown-menu
+                    li
+                      a[href="/Userdownload/ht"]
+                        | 発注書テンプレート
+                li.dropdown-submenu
+                  a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                    | メール
+                  ul.dropdown-menu
+                    li
+                      a[href="/Usermailset/svr"]
+                        | メールアカウント
+                li
+                  a[href="/User_Basic_Othersetting"]
+                    | その他
+                li.divider
+                li.nav-header
+                  | ダウンロード
+                  i.icon-download-alt
+                li
+                  a[href="/Userdownload/dlhis"]
+                    | 履歴
+            li.divider-vertical.nav-collapse
+            li.dropdown
+              a.dropdown-toggle[href="#" data-toggle="dropdown"]
+                span.nav-collapse
+                  | アプリ
+                i.fa.fa-th-large
+                b.caret
+              ul.dropdown-menu
+                li
+                  a[href="<%= settings.ap_server %>/" target="HCOSS"]
+                    | HCOSS
+                li
+                  a[href="<%= settings.ap_ne_server %>/Usertop" target="TOP"]
+                    | NextEngine
+                li
+                  a[href="" target="_blank"]
+                    | 本店
+                li
+                  a[href="" target="_blank"]
+                    | 楽天市場
+                li
+                  a[href="https://pro.store.yahoo.co.jp/pro.healthy-c" target="トップ - ストアクリエイターPro"]
+                    | Yahoo!ショッピング
+                li
+                  a[href="" target="_blank"]
+                    | amazon
+                li
+                  a[href="" target="_blank"]
+                    | ヤフオク
+                li
+                  a[href="" target="_blank"]
+                    | メールワイズ
+                li
+                  a[href="" target="_blank"]
+                    | AWS
