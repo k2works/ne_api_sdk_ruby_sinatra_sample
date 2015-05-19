@@ -32,7 +32,7 @@
         </li>
         <li class="divider-vertical nav-collapse"></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">受注</span><i class="fa fa-envelope-o"></i><b class="caret"></b></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">受注</span><i class="fa fa-list-alt"></i><b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><a href="https://healthy.cybozu.com/login" target="_blank">問い合わせ</a></li>
             <li class="dropdown-submenu">
@@ -67,14 +67,16 @@
                 <li><a href="<%= settings.ap_ne_server %>/Userinspection2" target="_blank">CSVファイルダウンロード</a></li>
                 <li><a href="<%= settings.ap_server %>/next_engine_order_uploads/new" target="_blank">NextEngine受注伝票アップロード</a></li>
                 <li><a href="<%= settings.ap_server %>/business_operation_errors/index" target="_blank">NextEngine用エラーチェック</a></li>
-                <li><a href="<%= settings.ap_ne_server %>/Userjyuchu/index?search_condi=12" target="_blank">確認チェック</a></li>
                 <li><a href="<%= settings.ap_ne_server %>/Userbikoukakunin" target="_blank">備考一括確認</a></li>
+                <li><a href="<%= settings.ap_ne_server %>/Userjyuchu/index?search_condi=12" target="_blank">伝票確認チェック</a></li>
                 <li><a href="<%= settings.ap_ne_server %>/Usermailsend/free" target="_blank">連絡メール</a></li>
               </ul>
             </li>
             <li class="dropdown-submenu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">引当</a>
               <ul class="dropdown-menu">
+                <li><a href="<%= settings.ap_ne_server %>/Userinspection2" target="_blank">CSVファイルダウンロード</a></li>
+                <li><a href="<%= settings.ap_server %>/next_engine_order_uploads/new" target="_blank">NextEngine受注伝票アップロード</a></li>
                 <li><a href="<%= settings.ap_server %>/back_order_next_engine_stock/index" target="_blank">在庫一括CSVダウンロード</a></li>
                 <li><a href="<%= settings.ap_ne_server %>/Usercsvupque" target="_blank">商品マスタ一括登録</a></li>
               </ul>
@@ -109,7 +111,7 @@
                 <li><a href="<%= settings.ap_ne_server %>/Userinspection2" target="_blank">CSVファイルダウンロード</a></li>
                 <li><a href="<%= settings.ap_server %>/next_engine_order_uploads/new" target="_blank">NextEngine受注伝票アップロード</a></li>
                 <li><a href="<%= settings.ap_server %>/business_operation_errors/index" target="_blank">NextEngine用エラーチェック</a></li>
-                <li><a href="<%= settings.ap_server %>/back_orders/summary" target="_blank">受注残ダウンロード</a></li>
+                <li><a href="<%= settings.ap_server %>/back_orders/detail" target="_blank">受注残ダウンロード</a></li>
                 <li><a href="/picking_list">ピッキングリスト印刷</a></li>
               </ul>
             </li>
@@ -126,9 +128,9 @@
                 <li><a href="<%= settings.ap_ne_server %>/Userinspection2" target="_blank">CSVファイルダウンロード</a></li>
                 <li><a href="<%= settings.ap_server %>/next_engine_order_uploads/new" target="_blank">NextEngine受注伝票アップロード</a></li>
                 <li><a href="<%= settings.ap_server %>/business_operation_errors/index" target="_blank">NextEngine用エラーチェック</a></li>
-                <li><a href="<%= settings.ap_server %>/planed_shipments/detail" target="_blank">受注残ダウンロード</a></li>
-                <li><a href="<%= settings.ap_server %>/planed_shipments/summary" target="_blank">運送会社振り分け</a></li>
-                <li><a href="<%= settings.ap_ne_server %>/Usersyukakepin/syukaset" target="_blank">出荷確定処理</a></li>
+                <li><a href="<%= settings.ap_server %>/shipment_confirmations/detail" target="_blank">受注残ダウンロード</a></li>
+                <li><a href="<%= settings.ap_server %>/shipment_confirmations/summary" target="_blank">運送会社振り分け</a></li>
+                <li><a href="<%= settings.ap_ne_server %>/Userjyuchu/index?search_condi=18" target="_blank">出荷確定処理</a></li>
                 <li><a href="<%= settings.ap_ne_server %>/Userdownload/haisoudl" target="_blank">配送情報ダウンロード</a></li>
                 <li><a href="">ゆうぱっくプリントR</a></li>
                 <li><a href="">B2</a></li>
@@ -258,10 +260,11 @@
       <li class="divider-vertical nav-collapse"></li>
       <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">アプリ</span><i class="fa fa-th-large"></i><b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li><a href="" target="_blank">HCOSS</a></li>
+          <li><a href="<%= settings.ap_server %>/" target="HCOSS">HCOSS</a></li>
+          <li><a href="<%= settings.ap_ne_server %>/Usertop" target="TOP">NextEngine</a></li>
           <li><a href="" target="_blank">本店</a></li>
           <li><a href="" target="_blank">楽天市場</a></li>
-          <li><a href="" target="_blank">Yahoo!ショッピング</a></li>
+          <li><a href="https://pro.store.yahoo.co.jp/pro.healthy-c" target="トップ - ストアクリエイターPro">Yahoo!ショッピング</a></li>
           <li><a href="" target="_blank">amazon</a></li>
           <li><a href="" target="_blank">ヤフオク</a></li>
           <li><a href="" target="_blank">メールワイズ</a></li>
