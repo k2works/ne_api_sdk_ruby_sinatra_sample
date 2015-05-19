@@ -82,9 +82,8 @@ module DemoSite
 
 
     get '/' do
-      @hello_redis = "Hello World! I have been seen #{REDIS.incr('/')} times."
       @page_name = 'home'
-      @page_title = 'Home page'
+      @page_title = 'Home'
       slim :index,
         :layout => :full_width,
         :layout_options => {:views => settings.layouts_dir}

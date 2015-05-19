@@ -34,7 +34,13 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="nav-collapse">受注</span><i class="fa fa-list-alt"></i><b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="https://healthy.cybozu.com/login" target="_blank">問い合わせ</a></li>
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">問い合わせ</a>
+              <ul class="dropdown-menu">
+                <li><a href="https://healthy.cybozu.com/login" target="_blank">メール確認</a></li>
+                <li><a href="<%= settings.ap_server %>/inquiries" target="_blank">問い合わせ管理</a></li>
+              </ul>
+            </li>
             <li class="dropdown-submenu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">受注取り込み</a>
               <ul class="dropdown-menu">

@@ -24,9 +24,16 @@ html[lang="en"]
                 i.fa.fa-list-alt
                 b.caret
               ul.dropdown-menu
-                li
-                  a[href="https://healthy.cybozu.com/login" target="_blank"]
+                li.dropdown-submenu
+                  a.dropdown-toggle[href="#" data-toggle="dropdown"]
                     | 問い合わせ
+                  ul.dropdown-menu
+                    li
+                      a[href="https://healthy.cybozu.com/login" target="_blank"]
+                        | メール確認
+                    li
+                      a[href="<%= settings.ap_server %>/inquiries" target="_blank"]
+                        | 問い合わせ管理
                 li.dropdown-submenu
                   a.dropdown-toggle[href="#" data-toggle="dropdown"]
                     | 受注取り込み
