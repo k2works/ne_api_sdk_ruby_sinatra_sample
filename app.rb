@@ -23,6 +23,31 @@ module DemoSite
       # Set your Google Analytics ID here if you have one:
       # set :google_analytics_id, 'UA-12345678-1'
 
+      if ENV['RACK_ENV'] == 'development'
+        AP_SERVER_HOST   = 'http://localhost'
+        AP_SERVER_PORT   = '3000'
+        AP_NE_SERVER_HOST = 'https://ne64.next-engine.com'
+        AP_NE_SERVER_PORT = '80'
+      else
+        AP_SERVER_HOST   = 'https://hcoss.healthy-com.com'
+        AP_SERVER_PORT   = '80'
+        AP_NE_SERVER_HOST = 'https://ne64.next-engine.com'
+        AP_NE_SERVER_PORT = '80'
+      end
+
+      if AP_SERVER_PORT == '80'
+        set :ap_server, AP_SERVER_HOST
+      else
+        set :ap_server, AP_SERVER_HOST + ':' +AP_SERVER_PORT
+      end
+
+      if AP_NE_SERVER_PORT == '80'
+        set :ap_ne_server, AP_NE_SERVER_HOST
+      else
+        set :ap_ne_server, AP_NE_SERVER_HOST + ':' +AP_NE_SERVER_PORT
+      end
+
+
       set :layouts_dir, 'views/_layouts'
       set :partials_dir, 'views/_partials'
 
