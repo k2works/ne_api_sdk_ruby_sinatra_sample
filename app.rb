@@ -97,10 +97,18 @@ module DemoSite
            :layout_options => {:views => settings.layouts_dir}
     end
 
+    get '/back_orders_list/' do
+      @page_name = 'back_orders_list'
+      @page_title = '受注残リスト印刷'
+      slim :back_orders_list,
+           :layout => :full_width,
+           :layout_options => {:views => settings.layouts_dir}
+    end
+
     get '/picking_list/' do
       @page_name = 'picking_list'
       @page_title = 'ピッキングリスト印刷'
-      slim :delivery_method,
+      slim :picking_list,
            :layout => :full_width,
            :layout_options => {:views => settings.layouts_dir}
     end
