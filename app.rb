@@ -89,6 +89,14 @@ module DemoSite
         :layout_options => {:views => settings.layouts_dir}
     end
 
+    get '/inventory_reservation/' do
+      @page_name = 'inventory_reservation'
+      @page_title = '在庫引当'
+      slim :delivery_method,
+           :layout => :full_width,
+           :layout_options => {:views => settings.layouts_dir}
+    end
+
     get '/delivery_method/' do
       @page_name = 'delivery_method'
       @page_title = '便種振り分け'
