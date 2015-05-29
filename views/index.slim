@@ -5,3 +5,21 @@ div.jumbotron
     | <a class="btn btn-primary btn-lg" href="
     = url('/special/')
     | ">もっと詳しく</a>
+  P
+    = @api_status
+
+- unless @response_json.nil?
+  h2 Response
+  table.table class=["table-condensed","table-striped","table-hover"]
+    - @response_json.each do |k,v|
+      tr
+        td "#{k}"
+        td "#{v}"
+
+- unless @data.nil?
+  h2 Data
+  table.table class=["table-condensed","table-striped","table-hover"]
+    - @data.each do |k,v|
+      tr
+        td "#{k}"
+        td "#{v}"
