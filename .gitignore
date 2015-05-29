@@ -39,5 +39,5 @@ build/
 .idea
 .sass-cache
 .vagrant
-.env
 dump.rdb
+.env
